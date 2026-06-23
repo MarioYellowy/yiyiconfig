@@ -7,6 +7,7 @@
     ./dev/git.nix
     ./dev/nushell.nix
     ./dev/alacritty.nix
+    ./dev/atuin.nix
   ];
 
   home.packages = with pkgs; [
