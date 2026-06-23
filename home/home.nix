@@ -14,6 +14,7 @@
     ./dev/firefox.nix
     ./dev/lsd.nix
     ./dev/neovim.nix
+    ./dev/starship.nix
     ./chill/discord.nix
   ];
 
