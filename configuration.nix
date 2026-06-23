@@ -102,7 +102,6 @@
     neovim
     pear-desktop
     rustup
-    gcc
   ];
 
   fonts.packages = with pkgs; [

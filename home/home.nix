@@ -10,6 +10,7 @@
     ./dev/atuin.nix
     ./dev/bottom.nix
     ./dev/fastfetch.nix
+    ./dev/gcc.nix
     ./chill/discord.nix
   ];
 
