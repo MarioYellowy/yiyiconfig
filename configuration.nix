@@ -108,6 +108,8 @@
     nil
     nixd
     zed-discord-presence
+    lua-language-server
+    wev
   ];
 
   fonts.packages = with pkgs; [
