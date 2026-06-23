@@ -17,6 +17,7 @@
     ./dev/starship.nix
     ./dev/noctalia.nix
     ./chill/discord.nix
+    ./chill/hyprland.nix
   ];
 
   home.packages = with pkgs; [

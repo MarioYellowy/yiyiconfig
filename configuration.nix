@@ -102,7 +102,6 @@
   environment.systemPackages = with pkgs; [
     brave
     zed-editor
-    steam
     whatsapp-electron
     pear-desktop
     rustup

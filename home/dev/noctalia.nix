@@ -442,7 +442,7 @@
           }
           {
             action = "rebootToUefi";
-            enabled = true;
+            enabled = false;
             keybind = "7";
           }
         ];
