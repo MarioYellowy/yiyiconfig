@@ -5,8 +5,9 @@
 
   imports = [
     ./dev/git.nix
+    ./dev/nushell.nix
   ];
-  
+
   home.packages = with pkgs; [
 
   ];
