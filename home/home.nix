@@ -15,6 +15,7 @@
     ./dev/lsd.nix
     ./dev/neovim.nix
     ./dev/starship.nix
+    ./dev/noctalia.nix
     ./chill/discord.nix
   ];
 
