@@ -6,6 +6,7 @@
   imports = [
     ./dev/git.nix
     ./dev/nushell.nix
+    ./dev/alacritty.nix
   ];
 
   home.packages = with pkgs; [
