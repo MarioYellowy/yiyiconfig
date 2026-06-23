@@ -12,6 +12,8 @@
     ./dev/fastfetch.nix
     ./dev/gcc.nix
     ./dev/firefox.nix
+    ./dev/lsd.nix
+    ./dev/neovim.nix
     ./chill/discord.nix
   ];
 

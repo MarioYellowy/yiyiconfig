@@ -6,5 +6,9 @@
     settings = {
         show_banner = false;
       };
+
+    shellAliases = {
+      ls = "lsd";
+    };
   };
 }

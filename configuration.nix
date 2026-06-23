@@ -93,7 +93,6 @@
     zed-editor
     steam
     whatsapp-electron
-    neovim
     pear-desktop
     rustup
   ];
