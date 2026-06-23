@@ -83,17 +83,11 @@
     description = "mario";
     extraGroups = [ "networkmanager" "wheel" ];
     packages = with pkgs; [
-    #  thunderbird
     ];
   };
-
-  # Install firefox.
-  programs.firefox.enable = false;
+ 
   programs.steam.enable = true;
-  programs.git.enable = true;
 
-  # List packages installed in system profile. To search, run:
-  # $ nix search wget
   environment.systemPackages = with pkgs; [
     brave
     zed-editor
