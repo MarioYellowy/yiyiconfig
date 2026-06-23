@@ -102,7 +102,7 @@
         animationSpeed = 1;
         animationDisabled = false;
         compactLockScreen = false;
-        lockScreenAnimations = false;
+        lockScreenAnimations = true;
         lockOnSuspend = true;
         showSessionButtonsOnLockScreen = true;
         showHibernateOnLockScreen = false;
@@ -121,7 +121,7 @@
         autoStartAuth = false;
         allowPasswordWithFprintd = false;
         clockStyle = "custom";
-        clockFormat = "hh\nmm";
+        clockFormat = "h:mm AP";
         passwordChars = false;
         lockScreenMonitors = [ ];
         lockScreenBlur = 0;
@@ -173,7 +173,7 @@
         weatherShowEffects = true;
         weatherTaliaMascotAlways = false;
         useFahrenheit = false;
-        use12hourFormat = false;
+        use12hourFormat = true;
         showWeekNumberInCalendar = false;
         showCalendarEvents = true;
         showCalendarWeather = true;
@@ -202,7 +202,7 @@
       wallpaper = {
         enabled = true;
         overviewEnabled = false;
-        directory = "";
+        directory = "/home/mario/Pictures/background.png";
         monitorDirectories = [ ];
         enableMultiMonitorDirectories = false;
         showHiddenFiles = false;
