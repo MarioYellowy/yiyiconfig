@@ -49,8 +49,22 @@
   # Enable the X11 windowing system.
   services.xserver.enable = true;
 
+  services.displayManager.sddm = {
+    enable = true;
+
+    wayland.enable = false;
+    package = pkgs.kdePackages.sddm;
+    extraPackages = with pkgs.kdePackages; [
+      qtsvg
+      qtdeclarative
+      qt5compat
+    ];
+
+    theme = "pixie";
+  };
+
   # Enable the GNOME Desktop Environment.
-  services.displayManager.gdm.enable = true;
+  services.displayManager.gdm.enable = false;
   services.desktopManager.gnome.enable = true;
   programs.hyprland.enable = true;
   xdg.portal.enable = true;
@@ -110,6 +124,19 @@
     zed-discord-presence
     lua-language-server
     wev
+    package-version-server
+    
+    (inputs.pixie-sddm.packages.${pkgs.stdenv.hostPlatform.system}.pixie-sddm.override {
+      background = ./assets/background.png; 
+      avatar = ./assets/Profile.jpeg;
+      primaryColor = "#B3C8FF";
+      accentColor = "#3F5F91";
+      autoColor = true;
+      backgroundColor = "#1A1C1E";
+      textColor = "#E2E2E6";
+      fontFamily = "JetBrains Mono";
+      fontSize = 13;
+    })
   ];
 
   fonts.packages = with pkgs; [

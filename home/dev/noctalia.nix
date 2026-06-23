@@ -41,6 +41,7 @@
             }
             {
               id = "Clock";
+              formatHorizontal = "h:mm AP";
             }
             {
               id = "SystemMonitor";
@@ -59,6 +60,9 @@
           ];
           right = [
             {
+              id = "AudioVisualizer";
+            }
+            {
               id = "Tray";
             }
             {
@@ -69,9 +73,6 @@
             }
             {
               id = "Volume";
-            }
-            {
-              id = "Brightness";
             }
             {
               id = "ControlCenter";
@@ -247,7 +248,7 @@
         favorites = [ ];
       };
       appLauncher = {
-        enableClipboardHistory = false;
+        enableClipboardHistory = true;
         autoPasteClipboard = false;
         enableClipPreview = true;
         clipboardWrapText = true;
@@ -509,7 +510,7 @@
         backlightDeviceMappings = [ ];
       };
       colorSchemes = {
-        useWallpaperColors = false;
+        useWallpaperColors = true;
         predefinedScheme = "Noctalia (default)";
         darkMode = true;
         schedulingMode = "off";
