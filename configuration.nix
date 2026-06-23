@@ -96,7 +96,6 @@
   # $ nix search wget
   environment.systemPackages = with pkgs; [
     brave
-    discord
     zed-editor
     steam
     whatsapp-electron
@@ -104,7 +103,6 @@
     pear-desktop
     rustup
     gcc
-    fastfetch
   ];
 
   fonts.packages = with pkgs; [

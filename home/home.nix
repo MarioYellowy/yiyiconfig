@@ -9,6 +9,8 @@
     ./dev/alacritty.nix
     ./dev/atuin.nix
     ./dev/bottom.nix
+    ./dev/fastfetch.nix
+    ./chill/discord.nix
   ];
 
   home.packages = with pkgs; [
