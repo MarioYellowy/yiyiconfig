@@ -97,14 +97,11 @@
   environment.systemPackages = with pkgs; [
     brave
     discord
-    alacritty
     zed-editor
     steam
-    kitty
     whatsapp-electron
     neovim
     pear-desktop
-    bottom
     rustup
     gcc
     fastfetch

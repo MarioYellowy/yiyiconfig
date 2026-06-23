@@ -8,6 +8,7 @@
     ./dev/nushell.nix
     ./dev/alacritty.nix
     ./dev/atuin.nix
+    ./dev/bottom.nix
   ];
 
   home.packages = with pkgs; [
