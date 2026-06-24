@@ -18,6 +18,8 @@
     ./dev/noctalia.nix
     ./chill/discord.nix
     ./chill/hyprland.nix
+    ./chill/prismlauncher.nix
+    ./chill/flameshot.nix
   ];
 
   home.packages = with pkgs; [
