@@ -20,6 +20,7 @@
     ./chill/hyprland.nix
     ./chill/prismlauncher.nix
     ./chill/flameshot.nix
+    ./chill/obs.nix
   ];
 
   home.packages = with pkgs; [
