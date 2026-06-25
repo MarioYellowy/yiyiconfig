@@ -33,6 +33,14 @@
         system = "x86_64-linux";
         specialArgs = { inherit inputs; };
         modules = [
+          {
+            nixpkgs.config.allowUnfree = true;
+            nixpkgs.overlays = [
+              (final: prev: {
+                surrealdb-bin = final.callPackage ./home/dev/surrealdb-bin.nix { };
+              })
+            ];
+          }
           ./configuration.nix
           home-manager.nixosModules.home-manager
           {

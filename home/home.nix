@@ -24,6 +24,6 @@
   ];
 
   home.packages = with pkgs; [
-
+    surrealdb-bin
   ];
 }
