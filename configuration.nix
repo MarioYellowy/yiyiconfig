@@ -124,6 +124,7 @@
     lua-language-server
     wev
     package-version-server
+    python3
 
     (inputs.pixie-sddm.packages.${pkgs.stdenv.hostPlatform.system}.pixie-sddm.override {
       background = ./assets/background.png;

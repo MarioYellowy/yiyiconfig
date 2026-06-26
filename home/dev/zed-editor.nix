@@ -22,6 +22,14 @@
     ];
 
     userSettings = {
+      lsp = {
+        rust-analyzer = {
+          binary = {
+            path = "/home/mario/.cargo/bin/rust-analyzer";
+            args = [ ];
+          };
+        };
+      };
       theme = {
         mode = "dark";
         dark = "Catppuccin Mocha";
