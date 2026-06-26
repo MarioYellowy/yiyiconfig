@@ -115,7 +115,6 @@
 
   environment.systemPackages = with pkgs; [
     brave
-    zed-editor
     whatsapp-electron
     pear-desktop
     rustup
@@ -125,9 +124,9 @@
     lua-language-server
     wev
     package-version-server
-    
+
     (inputs.pixie-sddm.packages.${pkgs.stdenv.hostPlatform.system}.pixie-sddm.override {
-      background = ./assets/background.png; 
+      background = ./assets/background.png;
       avatar = ./assets/Profile.jpeg;
       primaryColor = "#B3C8FF";
       accentColor = "#3F5F91";

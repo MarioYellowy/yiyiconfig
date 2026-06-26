@@ -22,3 +22,13 @@ do --env {
     load-env $ssh_agent_env
     $ssh_agent_env | save --force $ssh_agent_file
 }
+
+# SurrealDB dev instance
+def surreal-dev [] {
+    surreal start --user root --pass root --bind 127.0.0.1:8000 $"surrealkv://($env.HOME)/.local/share/surrealdb/dev"
+}
+
+# SurrealDB KV local project
+def surreal-project [] {
+    surreal start --user root --pass root --bind 127.0.0.1:8001 $"surrealkv://($env.PWD)/data/surreal"
+}
