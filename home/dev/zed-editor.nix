@@ -20,5 +20,13 @@
       "env"
       "nu"
     ];
+
+    userSettings = {
+      theme = {
+        mode = "dark";
+        dark = "Catppuccin Mocha";
+        light = "Catppuccin Latte";
+      };
+    };
   };
 }
