@@ -36,6 +36,11 @@
             path = "${pkgs.slint-lsp}/bin/slint-lsp";
           };
         };
+        lua-language-server = {
+          binary = {
+            path = "${pkgs.lua-language-server}/bin/lua-language-server";
+          };
+        };
       };
       theme = {
         mode = "dark";
