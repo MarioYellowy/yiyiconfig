@@ -108,8 +108,6 @@
       "networkmanager"
       "wheel"
     ];
-    packages = with pkgs; [
-    ];
   };
 
   programs.steam.enable = true;
@@ -122,7 +120,6 @@
     nil
     nixd
     zed-discord-presence
-    lua-language-server
     wev
     package-version-server
     python3

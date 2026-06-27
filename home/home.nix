@@ -26,5 +26,6 @@
 
   home.packages = with pkgs; [
     surrealdb-bin
+    skyemu
   ];
 }
