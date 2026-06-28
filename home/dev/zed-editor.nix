@@ -1,5 +1,8 @@
 { pkgs, ... }: {
-  home.packages = [ pkgs.slint-lsp ];
+  home.packages = [
+    pkgs.slint-lsp
+    pkgs.rust-analyzer
+  ];
 
   programs.zed-editor = {
     enable = true;
@@ -27,7 +30,7 @@
       lsp = {
         rust-analyzer = {
           binary = {
-            path = "/home/mario/.cargo/bin/rust-analyzer";
+            path = "${pkgs.rust-analyzer}/bin/rust-analyzer";
             args = [ ];
           };
         };
