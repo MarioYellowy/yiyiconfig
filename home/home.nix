@@ -28,6 +28,7 @@
     surrealdb-bin
     skyemu
     just
+    gimp
   ];
 
   gtk = {
