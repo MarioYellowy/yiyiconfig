@@ -66,7 +66,7 @@
 
   # Enable the GNOME Desktop Environment.
   services.displayManager.gdm.enable = false;
-  services.desktopManager.gnome.enable = true;
+  services.desktopManager.gnome.enable = false;
   programs.hyprland.enable = true;
   xdg.portal.enable = true;
   xdg.portal.extraPortals = [ pkgs.xdg-desktop-portal-hyprland ];
