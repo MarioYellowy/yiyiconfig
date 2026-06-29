@@ -5,7 +5,6 @@
       General = {
         disabledTrayIcon = true;
         showStartupLaunchMessage = false;
-        useGrimAdapter = true;
       };
     };
   };
