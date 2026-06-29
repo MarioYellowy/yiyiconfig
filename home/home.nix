@@ -26,6 +26,7 @@
 
   home.packages = with pkgs; [
     surrealdb-bin
+    surrealkit-bin
     skyemu
     just
     gimp

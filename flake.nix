@@ -38,7 +38,9 @@
             nixpkgs.overlays = [
               (final: prev: {
                 surrealdb-bin = final.callPackage ./home/dev/surrealdb-bin.nix { };
+                surrealkit-bin = final.callPackage ./home/dev/surrealkit-bin.nix { };
               })
+
             ];
           }
           ./configuration.nix
