@@ -55,17 +55,15 @@
         show = "never";
       };
       allow_rewrap = "in_comments";
-      autosave = {
-        after_delay = {
-          milliseconds = 100;
-        };
-      };
+      autosave = "off";
       code_lens = "on";
       rounded_selection = true;
       enable_language_server = true;
+      show_completions_on_input = true;
+      show_completion_documentation = true;
       edit_predictions = {
-          provider = "none";
-        };
+        provider = "none";
+      };
     };
   };
 }
