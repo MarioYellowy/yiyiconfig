@@ -63,6 +63,9 @@
       code_lens = "on";
       rounded_selection = true;
       enable_language_server = true;
+      edit_predictions = {
+          provider = "none";
+        };
     };
   };
 }
