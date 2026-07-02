@@ -7,6 +7,7 @@
       user.email = "mario03eche@gmail.com";
       pull.rebase = "true";
       init.defaultBranch = "main";
+      rerere.enable = true;
     };
   };
 }
