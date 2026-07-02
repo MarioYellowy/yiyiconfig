@@ -64,6 +64,9 @@
       edit_predictions = {
         provider = "none";
       };
+      terminal = {
+        copy_on_select = true;
+      };
     };
   };
 }
