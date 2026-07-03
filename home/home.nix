@@ -17,6 +17,7 @@
     ./dev/starship.nix
     ./dev/noctalia.nix
     ./dev/zed-editor.nix
+    ./dev/vscode.nix
     ./chill/discord.nix
     ./chill/hyprland.nix
     ./chill/prismlauncher.nix
