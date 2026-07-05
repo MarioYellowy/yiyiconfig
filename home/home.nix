@@ -31,6 +31,7 @@
     skyemu
     just
     gimp
+    typos-lsp
   ];
 
   gtk = {
