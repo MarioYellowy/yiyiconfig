@@ -30,6 +30,7 @@
     surrealkit-bin
     skyemu
     just
+    harper
     gimp
   ];
 
