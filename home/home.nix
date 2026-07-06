@@ -32,6 +32,12 @@
     just
     harper
     gimp
+    nodejs
+    pnpm
+    typescript
+    typescript-language-server
+    biome
+    postman
   ];
 
   gtk = {

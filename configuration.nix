@@ -125,6 +125,7 @@
     python3
     teams-for-linux
     libreoffice
+    nautilus
 
     (inputs.pixie-sddm.packages.${pkgs.stdenv.hostPlatform.system}.pixie-sddm.override {
       background = ./assets/background.png;
@@ -137,6 +138,14 @@
       fontFamily = "JetBrains Mono";
       fontSize = 13;
     })
+  ];
+
+  programs.nix-ld.enable = true;
+  programs.nix-ld.libraries = with pkgs; [
+    stdenv.cc.cc
+    zlib
+    openssl
+    libuv
   ];
 
   fonts.packages = with pkgs; [
