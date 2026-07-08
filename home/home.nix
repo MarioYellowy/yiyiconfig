@@ -34,13 +34,6 @@
     gimp
     postman
 
-    #JS
-    nodejs
-    pnpm
-    typescript
-    typescript-language-server
-    biome
-
     #C++
     gcc
     clang-tools

@@ -32,3 +32,10 @@ def surreal-dev [] {
 def surreal-project [] {
     surreal start --user root --pass root --bind 127.0.0.1:8001 $"surrealkv://($env.PWD)/data/surreal"
 }
+
+# fnm configuration
+$env.PATH = ($env.PATH | prepend $"($env.HOME)/.local/share/fnm")
+
+let fnm_env = (fnm env --json | from json)
+load-env $fnm_env
+$env.PATH = ($env.PATH | prepend $"($fnm_env.FNM_MULTISHELL_PATH)/bin")
