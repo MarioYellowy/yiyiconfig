@@ -36,6 +36,20 @@
             arguments = [ ];
           };
         };
+        clangd = {
+          binary = {
+            path = "${pkgs.clang-tools}/bin/clangd";
+            arguments = [
+              "--background-index"
+              "--clang-tidy"
+            ];
+          };
+        };
+        jdtls = {
+          binary = {
+            path = "${pkgs.jdt-language-server}/bin/jdtls";
+          };
+        };
         harper-ls = {
           binary = {
             path = "${pkgs.harper}/bin/harper-ls";
