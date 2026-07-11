@@ -22,6 +22,8 @@
   hardware.bluetooth.enable = true;
   services.power-profiles-daemon.enable = true;
   services.upower.enable = true;
+  services.dbus.enable = true;
+  services.gvfs.enable = true;
 
   nix.settings.experimental-features = [
     "nix-command"
@@ -185,5 +187,4 @@
   system.stateVersion = "26.05"; # Did you read the comment?
   system.autoUpgrade.enable = true;
   system.autoUpgrade.allowReboot = false;
-
 }
