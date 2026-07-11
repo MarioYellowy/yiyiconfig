@@ -27,6 +27,9 @@
   services.upower.enable = true;
   services.dbus.enable = true;
   services.gvfs.enable = true;
+  services.gnome.gnome-keyring.enable = true;
+
+  security.pam.services.sddm.enableGnomeKeyring = true;
 
   nix.settings.experimental-features = [
     "nix-command"
