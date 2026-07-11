@@ -127,6 +127,8 @@
     libreoffice
     nautilus
     unzip
+    vlc
+    handbrake
 
     (inputs.pixie-sddm.packages.${pkgs.stdenv.hostPlatform.system}.pixie-sddm.override {
       background = ./assets/background.png;
