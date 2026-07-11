@@ -1,3 +1,8 @@
+require("look-and-feel")
+require("input")
+require("keybinds")
+require("rules")
+
 hl.monitor({
     output   = "",
     mode     = "preferred",
@@ -14,8 +19,3 @@ end)
 
 hl.env("XCURSOR_THEME", "Bibata-Modern-Classic")
 hl.env("XCURSOR_SIZE", "20")
-
-require("look-and-feel")
-require("input")
-require("keybinds")
-require("rules")
