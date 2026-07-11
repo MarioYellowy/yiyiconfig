@@ -29,6 +29,14 @@
     ];
 
     userSettings = {
+      languages = {
+        Nix = {
+          language_servers = [
+            "nixd"
+            "!nil"
+          ];
+        };
+      };
       lsp = {
         rust-analyzer = {
           binary = {
@@ -69,6 +77,18 @@
         lua-language-server = {
           binary = {
             path = "${pkgs.lua-language-server}/bin/lua-language-server";
+          };
+        };
+        nixd = {
+          binary = {
+            path = "${pkgs.nixd}/bin/nixd";
+          };
+          initialization_options = {
+            nixd = {
+              formatting = {
+                command = [ "nixfmt" ];
+              };
+            };
           };
         };
       };
