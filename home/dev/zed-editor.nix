@@ -95,8 +95,8 @@
 
       theme = {
         mode = "dark";
-        dark = "Catppuccin Mocha";
-        light = "Catppuccin Latte";
+        dark = "GitHub Dark";
+        light = "GitHub Light";
       };
 
       icon_theme = "Catppuccin Mocha";
