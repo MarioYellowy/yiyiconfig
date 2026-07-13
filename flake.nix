@@ -29,6 +29,16 @@
       ...
     }:
     {
+      templates = {
+              rust = {
+                path = ./flakes/rust;
+                description = "Base template for Rust projects";
+              };
+            };
+
+            # (Opcional) Plantilla por defecto si solo llamas 'nix flake init'
+            defaultTemplate = self.templates.rust;
+
       nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
         specialArgs = { inherit inputs; };
