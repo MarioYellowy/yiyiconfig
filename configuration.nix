@@ -39,7 +39,7 @@
     automatic = true;
     dates = "daily";
     options = "--delete-older-than 5d";
-  }
+  };
 
   # Use latest kernel.
   boot.kernelPackages = pkgs.linuxPackages_latest;
