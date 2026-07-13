@@ -46,6 +46,7 @@
     jdt-language-server
     maven
     gradle
+    jetbrains.idea-oss
   ];
 
   gtk = {
