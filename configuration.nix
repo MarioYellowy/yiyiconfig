@@ -3,7 +3,6 @@
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
 {
-  config,
   pkgs,
   inputs,
   ...
@@ -21,6 +20,7 @@
   boot.loader.systemd-boot.configurationLimit = 10;
 
   nixpkgs.config.allowUnfree = true;
+
   hardware.bluetooth.enable = true;
 
   services.power-profiles-daemon.enable = true;
