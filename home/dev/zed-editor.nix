@@ -116,6 +116,11 @@
         provider = "none";
       };
 
+      project_panel = {
+        hide_hidden = false;
+        hide_gitignore = false;
+      };
+
       terminal = {
         copy_on_select = true;
       };
