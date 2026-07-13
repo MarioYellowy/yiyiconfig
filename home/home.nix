@@ -18,6 +18,7 @@
     ./dev/noctalia.nix
     ./dev/zed-editor.nix
     ./dev/vscode.nix
+    ./dev/direnv.nix
     ./chill/discord.nix
     ./chill/hyprland.nix
     ./chill/prismlauncher.nix
