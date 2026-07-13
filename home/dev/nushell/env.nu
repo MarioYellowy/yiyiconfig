@@ -41,3 +41,7 @@ $env.FNM_COREPACK_ENABLED = "true"
 let fnm_env = (fnm env --json | from json)
 load-env $fnm_env
 $env.PATH = ($env.PATH | prepend $"($fnm_env.FNM_MULTISHELL_PATH)/bin")
+
+$env.PATH = ($env.PATH | prepend $"($env.HOME)/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/bin")
+
+$env.LD_LIBRARY_PATH = ($env.NIX_LD_LIBRARY_PATH? | default "")
