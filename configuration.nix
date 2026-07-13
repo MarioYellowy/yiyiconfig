@@ -129,7 +129,6 @@
     brave
     whatsapp-electron
     pear-desktop
-    rustup
     nixd
     zed-discord-presence
     wev

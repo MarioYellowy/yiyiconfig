@@ -36,7 +36,6 @@
               };
             };
 
-            # (Opcional) Plantilla por defecto si solo llamas 'nix flake init'
             defaultTemplate = self.templates.rust;
 
       nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
