@@ -12,6 +12,7 @@
     ./dev/fastfetch.nix
     ./dev/gcc.nix
     ./dev/firefox.nix
+    ./dev/carapace.nix
     ./dev/neovim.nix
     ./dev/starship.nix
     ./dev/noctalia.nix

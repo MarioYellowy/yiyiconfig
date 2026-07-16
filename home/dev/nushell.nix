@@ -8,9 +8,4 @@
       show_banner = false;
     };
   };
-
-  programs.carapace = {
-    enable = true;
-    enableNushellIntegration = true;
-  };
 }
