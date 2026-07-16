@@ -111,6 +111,7 @@
       enable_language_server = true;
       show_completions_on_input = true;
       show_completion_documentation = true;
+      ui_font_size = 15;
 
       edit_predictions = {
         provider = "none";
@@ -123,6 +124,7 @@
 
       terminal = {
         copy_on_select = true;
+        font_size = 14;
       };
     };
   };

@@ -6,7 +6,6 @@
 
     settings = {
       show_banner = false;
-
     };
   };
 
