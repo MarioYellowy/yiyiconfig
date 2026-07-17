@@ -1,9 +1,9 @@
-{ pkgs, ... }: {
+{ pkgs, pkgs-unstable, ... }: {
   home.packages = [
     pkgs.slint-lsp
     pkgs.rust-analyzer
     pkgs.just-lsp
-    pkgs.harper
+    pkgs-unstable.harper
   ];
 
   programs.zed-editor = {
@@ -60,7 +60,7 @@
         };
         harper-ls = {
           binary = {
-            path = "${pkgs.harper}/bin/harper-ls";
+            path = "${pkgs-unstable.harper}/bin/harper-ls";
             arguments = [ "--stdio" ];
           };
         };
