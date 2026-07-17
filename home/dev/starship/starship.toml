@@ -1,15 +1,15 @@
 "$schema" = 'https://starship.rs/config-schema.json'
 
 format = """
-[](red)\
+[](dark_blue)\
 $os\
 $username\
-[](bg:peach fg:red)\
+[](bg:blue_gray fg:dark_blue)\
 $directory\
-[](bg:yellow fg:peach)\
+[](bg:blue_soft_gray fg:blue_gray)\
 $git_branch\
 $git_status\
-[](fg:yellow bg:green)\
+[](fg:blue_soft_gray bg:black)\
 $c\
 $rust\
 $golang\
@@ -20,7 +20,7 @@ $java\
 $kotlin\
 $haskell\
 $python\
-[](fg:green bg:sapphire)\
+[](fg:black bg:sapphire)\
 $conda\
 [](fg:sapphire bg:lavender)\
 $time\
@@ -33,7 +33,7 @@ palette = 'yiyi'
 
 [os]
 disabled = false
-style = "bg:red bold fg:white"
+style = "bg:dark_blue bold fg:white"
 
 [os.symbols]
 NixOS = "󱄅"
@@ -59,12 +59,12 @@ RedHatEnterprise = "󱄛"
 
 [username]
 show_always = true
-style_user = "bg:red bold fg:white"
-style_root = "bg:red bold fg:white"
+style_user = "bg:dark_blue fg:white"
+style_root = "bg:dark_blue bold fg:white"
 format = '[ $user]($style)'
 
 [directory]
-style = "bg:peach bold fg:crust"
+style = "bg:blue_gray bold fg:crust"
 format = "[ $path ]($style)"
 truncation_length = 3
 truncation_symbol = "…/"
@@ -78,71 +78,71 @@ truncation_symbol = "…/"
 
 [git_branch]
 symbol = " "
-style = "bold fg:crust bg:yellow"
+style = "bold fg:crust bg:blue_soft_gray"
 format = '[ $symbol$branch ]($style)'
 
 [git_status]
-style = "bold fg:crust bg:yellow"
+style = "fg:crust bg:blue_soft_gray"
 format = '[($all_status$ahead_behind )]($style)'
 
 [nodejs]
 symbol = ""
-style = "bg:green"
+style = "bg:black"
 format = '[[ $symbol( $version) ](fg:crust bg:green)]($style)'
 
 [bun]
 symbol = ""
-style = "bg:green"
+style = "bg:black"
 format = '[[ $symbol( $version) ](fg:crust bg:green)]($style)'
 
 [c]
 symbol = " "
-style = "bg:green"
+style = "bg:black"
 format = '[[ $symbol( $version) ](fg:crust bg:green)]($style)'
 
 [rust]
 symbol = ""
-style = "bg:green"
-format = '[[ $symbol( $version) ](fg:crust bg:green)]($style)'
+style = "bg:black"
+format = '[[ $symbol( $version) ](fg:white bg:black)]($style)'
 
 [golang]
 symbol = ""
-style = "bg:green"
+style = "bg:black"
 format = '[[ $symbol( $version) ](fg:crust bg:green)]($style)'
 
 [php]
 symbol = ""
-style = "bg:green"
+style = "bg:black"
 format = '[[ $symbol( $version) ](fg:crust bg:green)]($style)'
 
 [java]
 symbol = " "
-style = "bg:green"
+style = "bg:black"
 format = '[[ $symbol( $version) ](fg:crust bg:green)]($style)'
 
 [kotlin]
 symbol = ""
-style = "bg:green"
+style = "bg:black"
 format = '[[ $symbol( $version) ](fg:crust bg:green)]($style)'
 
 [haskell]
 symbol = ""
-style = "bg:green"
+style = "bg:black"
 format = '[[ $symbol( $version) ](fg:crust bg:green)]($style)'
 
 [python]
 symbol = ""
-style = "bg:green"
+style = "bg:black"
 format = '[[ $symbol( $version)(\(#$virtualenv\)) ](fg:crust bg:green)]($style)'
 
 [docker_context]
 symbol = ""
-style = "bg:sapphire"
+style = "bg:black"
 format = '[[ $symbol( $context) ](fg:crust bg:sapphire)]($style)'
 
 [conda]
 symbol = "  "
-style = "fg:crust bg:sapphire"
+style = "fg:crust bg:black"
 format = '[$symbol$environment ]($style)'
 ignore_base = false
 
@@ -153,7 +153,7 @@ style = "bg:lavender"
 format = '[[  $time ](fg:crust bg:lavender)]($style)'
 
 [line_break]
-disabled = true
+disabled = false
 
 [character]
 disabled = false
@@ -173,11 +173,15 @@ show_notifications = true
 min_time_to_notify = 45000
 
 [palettes.yiyi]
+dark_blue = "#0F2027"
+blue_gray = "#868b90"
+blue_soft_gray = "#aabbc5"
+black = "#262626"
+orange = "#f9753a"
 rosewater = "#d8edf0"
 flamingo = "#c7e6eb"
 pink = "#acd8e7"
 mauve = "#92cae4"
-red = "#0d7a8e"
 maroon = "#118998"
 peach = "#149aa4"
 yellow = "#1dba9e"
