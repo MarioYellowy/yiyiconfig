@@ -1,4 +1,4 @@
-{ pkgs, ... }: {
+{ pkgs, pkgs-unstable, ... }: {
   home.username = "mario";
   home.homeDirectory = "/home/mario";
   home.stateVersion = "26.05";
@@ -26,30 +26,31 @@
     ./chill/obs.nix
   ];
 
-  home.packages = with pkgs; [
-    surrealdb-bin
-    surrealkit-bin
-    skyemu
-    just
-    harper
-    gimp
-    postman
-    tree
-
-    #C++
-    gcc
-    clang-tools
-    cmake
-    gdb
-    lldb
-
-    #Java
-    jdk
-    jdt-language-server
-    maven
-    gradle
-    jetbrains.idea-oss
-  ];
+  home.packages =
+      ( with pkgs; [
+        surrealdb-bin
+        surrealkit-bin
+        #C++
+        gcc
+        clang-tools
+        cmake
+        gdb
+        lldb
+        #Java
+        jdk
+        jdt-language-server
+        maven
+        gradle
+        jetbrains.idea-oss
+      ])
+      ++ ( with pkgs-unstable; [
+        skyemu
+        just
+        harper
+        gimp
+        postman
+        tree
+      ]);
 
   gtk = {
     enable = true;
