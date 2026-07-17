@@ -34,6 +34,7 @@
     harper
     gimp
     postman
+    tree
 
     #C++
     gcc
