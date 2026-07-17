@@ -4,6 +4,7 @@
 
 {
   pkgs,
+  pkgs-unstable,
   inputs,
   ...
 }:
@@ -123,21 +124,10 @@
 
   programs.steam.enable = true;
 
-  environment.systemPackages = with pkgs; [
-    brave
-    whatsapp-electron
-    pear-desktop
+  environment.systemPackages =  (with pkgs; [
     nixd
-    zed-discord-presence
-    wev
-    package-version-server
     python3
-    teams-for-linux
-    libreoffice
-    nautilus
     unzip
-    vlc
-    handbrake
 
     (inputs.pixie-sddm.packages.${pkgs.stdenv.hostPlatform.system}.pixie-sddm.override {
       background = ./assets/background.png;
@@ -150,7 +140,22 @@
       fontFamily = "JetBrains Mono";
       fontSize = 13;
     })
-  ];
+  ])
+  ++
+
+   (with pkgs-unstable; [
+    brave
+    whatsapp-electron
+    pear-desktop
+    zed-discord-presence
+    wev
+    package-version-server
+    teams-for-linux
+    libreoffice
+    nautilus
+    vlc
+    # handbrake
+  ]);
 
   programs.nix-ld.enable = true;
   programs.nix-ld.libraries = with pkgs; [
