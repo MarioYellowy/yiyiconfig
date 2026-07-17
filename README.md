@@ -15,53 +15,14 @@ playing as well. Currently use [Hyprland](https://hypr.land/) as compositor and
 ```nushell
 .
 ├── assets
-│   ├── background.png
-│   └── Profile.jpeg
-├── configuration.nix
-├── flake.lock
-├── flake.nix
-├── hardware-configuration.nix
 ├── home
 │   ├── chill
-│   │   ├── discord.nix
-│   │   ├── flameshot.nix
-│   │   ├── hyprland
-│   │   │   ├── hyprland.lua
-│   │   │   ├── input.lua
-│   │   │   ├── keybinds.lua
-│   │   │   ├── look-and-feel.lua
-│   │   │   └── rules.lua
-│   │   ├── hyprland.nix
-│   │   ├── obs.nix
-│   │   └── prismlauncher.nix
-│   ├── dev
-│   │   ├── alacritty.nix
-│   │   ├── atuin.nix
-│   │   ├── bottom.nix
-│   │   ├── carapace.nix
-│   │   ├── direnv.nix
-│   │   ├── fastfetch.nix
-│   │   ├── firefox.nix
-│   │   ├── gcc.nix
-│   │   ├── git.nix
-│   │   ├── neovim.nix
-│   │   ├── noctalia.nix
-│   │   ├── nushell
-│   │   │   ├── config.nu
-│   │   │   └── env.nu
-│   │   ├── nushell.nix
-│   │   ├── starship
-│   │   │   └── starship.toml
-│   │   ├── starship.nix
-│   │   ├── surrealdb-bin.nix
-│   │   ├── surrealkit-bin.nix
-│   │   ├── vscode.nix
-│   │   └── zed-editor.nix
-│   └── home.nix
-├── README.md
+│   │   └── hyprland
+│   └── dev
+│       ├── nushell
+│       └── starship
 └── templates
     └── rust
-        └── flake.nix
 ```
 
 ### About the Structure
