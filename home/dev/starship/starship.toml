@@ -20,11 +20,11 @@ $java\
 $kotlin\
 $haskell\
 $python\
-[](fg:black bg:sapphire)\
+[](fg:black bg:white)\
 $conda\
-[](fg:sapphire bg:lavender)\
+[](fg:white bg:green)\
 $time\
-[ ](fg:lavender)\
+[ ](fg:green)\
 $cmd_duration\
 $line_break\
 $character"""
@@ -149,17 +149,17 @@ ignore_base = false
 [time]
 disabled = false
 time_format = "%R"
-style = "bg:lavender"
-format = '[[  $time ](fg:crust bg:lavender)]($style)'
+style = "bg:green"
+format = '[[  $time ](fg:white bg:green)]($style)'
 
 [line_break]
 disabled = false
 
 [character]
 disabled = false
-success_symbol = '[❯](bold fg:green)'
-error_symbol = '[❯](bold fg:red)'
-vimcmd_symbol = '[❮](bold fg:green)'
+success_symbol = '[❯](bold fg:success)'
+error_symbol = '[❯](bold fg:error)'
+vimcmd_symbol = '[❮](bold fg:success)'
 vimcmd_replace_one_symbol = '[❮](bold fg:lavender)'
 vimcmd_replace_symbol = '[❮](bold fg:lavender)'
 vimcmd_visual_symbol = '[❮](bold fg:yellow)'
@@ -178,6 +178,9 @@ blue_gray = "#868b90"
 blue_soft_gray = "#aabbc5"
 black = "#262626"
 orange = "#f9753a"
+green = "#08372c"
+success = "#2596be"
+error = "#087d51"
 rosewater = "#d8edf0"
 flamingo = "#c7e6eb"
 pink = "#acd8e7"
@@ -185,7 +188,6 @@ mauve = "#92cae4"
 maroon = "#118998"
 peach = "#149aa4"
 yellow = "#1dba9e"
-green = "#26c496"
 teal = "#35b7b5"
 sky = "#3fb1c2"
 sapphire = "#44aace"
