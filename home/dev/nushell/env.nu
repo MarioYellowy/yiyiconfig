@@ -23,6 +23,39 @@ do --env {
     $ssh_agent_env | save --force $ssh_agent_file
 }
 
+ssh-keys-load-missing
+
+def ssh-keys-load-missing [] {
+    let ssh_dir = $"($env.HOME)/.ssh"
+    if not ($ssh_dir | path exists) {
+        return
+    }
+
+    let loaded = (do { ^ssh-add -l } | complete)
+    let loaded_fingerprints = if $loaded.exit_code == 0 {
+        $loaded.stdout | lines | each { |line| $line | split row " " | get 1 }
+    } else {
+        []
+    }
+
+    let candidates = (
+        glob $"($ssh_dir)/*.pub"
+        | each { |pub|
+            let parsed = ($pub | path parse)
+            { priv: ($parsed.parent | path join $parsed.stem), pub: $pub }
+        }
+    )
+
+    for c in $candidates {
+        if ($c.priv | path exists) {
+            let fp = (^ssh-keygen -lf $c.pub | split row " " | get 1)
+            if not ($fp in $loaded_fingerprints) {
+                ^ssh-add $c.priv
+            }
+        }
+    }
+}
+
 # SurrealDB dev instance
 def surreal-dev [] {
     surreal start --user root --pass root --bind 127.0.0.1:8000 $"surrealkv://($env.HOME)/.local/share/surrealdb/dev"
