@@ -12,7 +12,7 @@ playing as well. Currently use [Hyprland](https://hypr.land/) as compositor and
 
 ## Structure
 
-`
+```nushell
 .
 ├── assets
 │   ├── background.png
@@ -62,7 +62,7 @@ playing as well. Currently use [Hyprland](https://hypr.land/) as compositor and
 └── templates
     └── rust
         └── flake.nix
-`
+```
 
 ### About the Structure
 
