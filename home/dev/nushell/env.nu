@@ -50,7 +50,7 @@ def ssh-keys-load-missing [] {
         if ($c.priv | path exists) {
             let fp = (^ssh-keygen -lf $c.pub | split row " " | get 1)
             if not ($fp in $loaded_fingerprints) {
-                ^ssh-add $c.priv
+                ^ssh-add -q $c.priv
             }
         }
     }
