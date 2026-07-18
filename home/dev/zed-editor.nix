@@ -38,12 +38,12 @@
         };
       };
       lsp = {
-        rust-analyzer = {
-          binary = {
-            path = "${pkgs.rust-analyzer}/bin/rust-analyzer";
-            arguments = [ ];
-          };
-        };
+        # rust-analyzer = {
+        #   binary = {
+        #     path = "${pkgs.rust-analyzer}/bin/rust-analyzer";
+        #     arguments = [ ];
+        #   };
+        # };
         clangd = {
           binary = {
             path = "${pkgs.clang-tools}/bin/clangd";
@@ -112,7 +112,7 @@
       show_completions_on_input = true;
       show_completion_documentation = true;
       ui_font_size = 15;
-      load_direnv = "shell_hook";
+      load_direnv = "direct";
 
       edit_predictions = {
         provider = "none";
