@@ -112,6 +112,7 @@
       show_completions_on_input = true;
       show_completion_documentation = true;
       ui_font_size = 15;
+      load_direnv = "shell_hook";
 
       edit_predictions = {
         provider = "none";
