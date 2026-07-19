@@ -3,6 +3,7 @@
     pkgs.slint-lsp
     pkgs.rust-analyzer
     pkgs.just-lsp
+    pkgs.nixfmt
     pkgs-unstable.harper
   ];
 
@@ -38,12 +39,13 @@
         };
       };
       lsp = {
-        # rust-analyzer = {
-        #   binary = {
-        #     path = "${pkgs.rust-analyzer}/bin/rust-analyzer";
-        #     arguments = [ ];
-        #   };
-        # };
+        rust-analyzer = {
+          initialization_options = {
+            files = {
+              watcher = "client";
+            };
+          };
+        };
         clangd = {
           binary = {
             path = "${pkgs.clang-tools}/bin/clangd";
@@ -95,8 +97,8 @@
 
       theme = {
         mode = "dark";
-        dark = "GitHub Dark";
-        light = "GitHub Light";
+        dark = "GitHub Dark Default";
+        light = "GitHub Dark Default";
       };
 
       icon_theme = "Catppuccin Mocha";
@@ -127,6 +129,13 @@
         copy_on_select = true;
         font_size = 14;
       };
+
+      file_scan_exclusions = [
+        "**/.git"
+        "**/target"
+        "**/.direnv"
+        "**/node_modules"
+      ];
     };
   };
 }

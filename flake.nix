@@ -35,16 +35,16 @@
         inherit system;
         config.allowUnfree = true;
       };
-      in
+    in
     {
       templates = {
-              rust = {
-                path = ./flakes/rust;
-                description = "Base template for Rust projects";
-              };
-            };
+        rust = {
+          path = ./flakes/rust;
+          description = "Base template for Rust projects";
+        };
+      };
 
-            defaultTemplate = self.templates.rust;
+      defaultTemplate = self.templates.rust;
 
       nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
         inherit system;
@@ -61,7 +61,8 @@
             ];
           }
 
-          home-manager.nixosModules.home-manager {
+          home-manager.nixosModules.home-manager
+          {
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
             home-manager.users.mario = import ./home/home.nix;

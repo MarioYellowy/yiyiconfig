@@ -6,8 +6,8 @@
 
     configPath = "${config.xdg.configHome}/starship.toml";
 
-    settings = {};
-    presets = [];
+    settings = { };
+    presets = [ ];
   };
 
   home.file.".config/starship.toml".source = ./starship/starship.toml;

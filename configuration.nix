@@ -43,6 +43,9 @@
   # Use latest kernel.
   boot.kernelPackages = pkgs.linuxPackages_latest;
 
+  boot.kernel.sysctl."fs.inotify.max_user_watches" = 524288;
+  boot.kernel.sysctl."fs.inotify.max_user_instances" = 512;
+
   networking.hostName = "nixos"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
@@ -124,38 +127,39 @@
 
   programs.steam.enable = true;
 
-  environment.systemPackages =  (with pkgs; [
-    nixd
-    python3
-    unzip
+  environment.systemPackages =
+    (with pkgs; [
+      nixd
+      python3
+      unzip
 
-    (inputs.pixie-sddm.packages.${pkgs.stdenv.hostPlatform.system}.pixie-sddm.override {
-      background = ./assets/background.png;
-      avatar = ./assets/Profile.jpeg;
-      primaryColor = "#B3C8FF";
-      accentColor = "#3F5F91";
-      autoColor = true;
-      backgroundColor = "#1A1C1E";
-      textColor = "#E2E2E6";
-      fontFamily = "JetBrains Mono";
-      fontSize = 13;
-    })
-  ])
-  ++
+      (inputs.pixie-sddm.packages.${pkgs.stdenv.hostPlatform.system}.pixie-sddm.override {
+        background = ./assets/background.png;
+        avatar = ./assets/Profile.jpeg;
+        primaryColor = "#B3C8FF";
+        accentColor = "#3F5F91";
+        autoColor = true;
+        backgroundColor = "#1A1C1E";
+        textColor = "#E2E2E6";
+        fontFamily = "JetBrains Mono";
+        fontSize = 13;
+      })
+    ])
+    ++
 
-   (with pkgs-unstable; [
-    brave
-    whatsapp-electron
-    pear-desktop
-    zed-discord-presence
-    wev
-    package-version-server
-    teams-for-linux
-    libreoffice
-    nautilus
-    vlc
-    # handbrake
-  ]);
+      (with pkgs-unstable; [
+        brave
+        whatsapp-electron
+        pear-desktop
+        zed-discord-presence
+        wev
+        package-version-server
+        teams-for-linux
+        libreoffice
+        nautilus
+        vlc
+        # handbrake
+      ]);
 
   programs.nix-ld.enable = true;
   programs.nix-ld.libraries = with pkgs; [

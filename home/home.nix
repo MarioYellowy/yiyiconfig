@@ -27,30 +27,30 @@
   ];
 
   home.packages =
-      ( with pkgs; [
-        surrealdb-bin
-        surrealkit-bin
-        #C++
-        gcc
-        clang-tools
-        cmake
-        gdb
-        lldb
-        #Java
-        jdk
-        jdt-language-server
-        maven
-        gradle
-        jetbrains.idea-oss
-      ])
-      ++ ( with pkgs-unstable; [
-        skyemu
-        just
-        harper
-        gimp
-        postman
-        tree
-      ]);
+    (with pkgs; [
+      surrealdb-bin
+      surrealkit-bin
+      #C++
+      gcc
+      clang-tools
+      cmake
+      gdb
+      lldb
+      #Java
+      jdk
+      jdt-language-server
+      maven
+      gradle
+      jetbrains.idea-oss
+    ])
+    ++ (with pkgs-unstable; [
+      skyemu
+      just
+      harper
+      gimp
+      postman
+      tree
+    ]);
 
   gtk = {
     enable = true;
