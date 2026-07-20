@@ -16,7 +16,7 @@
     ./dev/neovim.nix
     ./dev/starship.nix
     ./dev/noctalia.nix
-    ./dev/zed-editor.nix
+    ./dev/zeditor.nix
     ./dev/vscode.nix
     ./dev/direnv.nix
     ./chill/discord.nix
@@ -28,28 +28,45 @@
 
   home.packages =
     (with pkgs; [
-      surrealdb-bin
-      surrealkit-bin
-      #C++
-      gcc
-      clang-tools
-      cmake
-      gdb
-      lldb
-      #Java
-      jdk
+      # LSPs and Dev Tools
+      rust-analyzer
+      just-lsp
+      slint-lsp
+      lua-language-server
+      harper
+
+      # Nix
+      nixd
+      nixfmt
+
+      # Java
       jdt-language-server
       maven
       gradle
       jetbrains.idea-oss
+
+      # SurrealDB
+      surrealdb-bin
+      surrealkit-bin
+
+      # C/C++
+      gcc
+      cmake
+      gdb
+      lldb
+      clang-tools
+
     ])
     ++ (with pkgs-unstable; [
       skyemu
-      just
-      harper
       gimp
       postman
       tree
+      whatsapp-electron
+      wev
+      package-version-server
+      teams-for-linux
+      # handbrake
     ]);
 
   gtk = {
