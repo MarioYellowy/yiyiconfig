@@ -19,15 +19,15 @@
   boot.loader.efi.canTouchEfiVariables = true;
   boot.loader.systemd-boot.configurationLimit = 5;
 
+  # Use latest kernel.
+  boot.kernelPackages = pkgs.linuxPackages_latest;
+
+  boot.kernel.sysctl."fs.inotify.max_user_watches" = 524288;
+  boot.kernel.sysctl."fs.inotify.max_user_instances" = 512;
+
   nixpkgs.config.allowUnfree = true;
 
   hardware.bluetooth.enable = true;
-
-  services.power-profiles-daemon.enable = true;
-  services.upower.enable = true;
-  services.dbus.enable = true;
-  services.gvfs.enable = true;
-  services.gnome.gnome-keyring.enable = true;
 
   security.pam.services.sddm.enableGnomeKeyring = true;
 
@@ -39,12 +39,6 @@
   nix.gc = {
 
   };
-
-  # Use latest kernel.
-  boot.kernelPackages = pkgs.linuxPackages_latest;
-
-  boot.kernel.sysctl."fs.inotify.max_user_watches" = 524288;
-  boot.kernel.sysctl."fs.inotify.max_user_instances" = 512;
 
   networking.hostName = "nixos"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
@@ -61,6 +55,12 @@
 
   # Select internationalisation properties.
   i18n.defaultLocale = "en_US.UTF-8";
+
+  services.power-profiles-daemon.enable = true;
+  services.upower.enable = true;
+  services.dbus.enable = true;
+  services.gvfs.enable = true;
+  services.gnome.gnome-keyring.enable = true;
 
   # Enable the X11 windowing system.
   services.xserver.enable = true;
@@ -79,12 +79,9 @@
     theme = "pixie";
   };
 
-  # Enable the GNOME Desktop Environment.
+  # Disable the GNOME Desktop Environment.
   services.displayManager.gdm.enable = false;
   services.desktopManager.gnome.enable = false;
-  programs.hyprland.enable = true;
-  xdg.portal.enable = true;
-  xdg.portal.extraPortals = [ pkgs.xdg-desktop-portal-hyprland ];
 
   # Configure keymap in X11
   services.xserver.xkb = {
@@ -111,6 +108,23 @@
     #media-session.enable = true;
   };
 
+  services.postgresql = {
+    package = pkgs.postgresql;
+    enable = true;
+    ensureDatabases = [
+      "mydatabase"
+    ];
+    authentication = pkgs.lib.mkOverride 10 ''
+      #type database DBuser auth-method
+      local all      all    trust
+    '';
+  };
+
+  programs.hyprland.enable = true;
+
+  xdg.portal.enable = true;
+  xdg.portal.extraPortals = [ pkgs.xdg-desktop-portal-hyprland ];
+
   # Enable touchpad support (enabled default in most desktopManager).
   # services.xserver.libinput.enable = true;
 
@@ -131,7 +145,15 @@
     (with pkgs; [
       nixd
       python3
+      nodejs
+      jdk
+      just
+      harper
+
       unzip
+      libreoffice
+      nautilus
+      vlc
 
       (inputs.pixie-sddm.packages.${pkgs.stdenv.hostPlatform.system}.pixie-sddm.override {
         background = ./assets/background.png;
@@ -149,16 +171,6 @@
 
       (with pkgs-unstable; [
         brave
-        whatsapp-electron
-        pear-desktop
-        zed-discord-presence
-        wev
-        package-version-server
-        teams-for-linux
-        libreoffice
-        nautilus
-        vlc
-        # handbrake
       ]);
 
   programs.nix-ld.enable = true;
