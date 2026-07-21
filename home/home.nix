@@ -55,6 +55,7 @@
       gdb
       lldb
       clang-tools
+      handbrake
 
     ])
     ++ (with pkgs-unstable; [
@@ -66,7 +67,8 @@
       wev
       package-version-server
       teams-for-linux
-      # handbrake
+      pear-desktop
+
     ]);
 
   gtk = {
