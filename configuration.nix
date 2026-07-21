@@ -146,6 +146,7 @@
       nixd
       python3
       nodejs
+      pnpm
       jdk
       just
       harper
