@@ -169,6 +169,14 @@
         code_actions = false;
       };
 
+      inlay_hints = {
+        enabled = true;
+        show_type_hints = true;
+        show_parameter_hints = true;
+        show_other_hints = true;
+        show_background = false;
+      };
+
       terminal = {
         copy_on_select = true;
         font_size = 14;
