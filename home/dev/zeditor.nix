@@ -17,6 +17,7 @@
       "lua"
       "csv"
       "rainbow-csv"
+      "everforest-blurred"
       "env"
       "nu"
     ];
@@ -91,8 +92,8 @@
 
       theme = {
         mode = "dark";
-        dark = "Ayu Dark";
-        light = "Ayu Dark";
+        dark = "Everforest Blurred";
+        light = "Everforest Blurred";
       };
 
       icon_theme = "Catppuccin Mocha";
