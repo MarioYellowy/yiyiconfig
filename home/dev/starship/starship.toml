@@ -88,17 +88,17 @@ format = '[($all_status$ahead_behind )]($style)'
 [nodejs]
 symbol = ""
 style = "bg:black"
-format = '[[ $symbol( $version) ](fg:crust bg:green)]($style)'
+format = '[[ $symbol( $version) ](fg:white bg:black)]($style)'
 
 [bun]
 symbol = ""
 style = "bg:black"
-format = '[[ $symbol( $version) ](fg:crust bg:green)]($style)'
+format = '[[ $symbol( $version) ](fg:white bg:black)]($style)'
 
 [c]
 symbol = " "
 style = "bg:black"
-format = '[[ $symbol( $version) ](fg:crust bg:green)]($style)'
+format = '[[ $symbol( $version) ](fg:white bg:black)]($style)'
 
 [rust]
 symbol = ""
@@ -108,27 +108,27 @@ format = '[[ $symbol( $version) ](fg:white bg:black)]($style)'
 [golang]
 symbol = ""
 style = "bg:black"
-format = '[[ $symbol( $version) ](fg:crust bg:green)]($style)'
+format = '[[ $symbol( $version) ](fg:white bg:black)]($style)'
 
 [php]
 symbol = ""
 style = "bg:black"
-format = '[[ $symbol( $version) ](fg:crust bg:green)]($style)'
+format = '[[ $symbol( $version) ](fg:white bg:black)]($style)'
 
 [java]
 symbol = " "
 style = "bg:black"
-format = '[[ $symbol( $version) ](fg:crust bg:green)]($style)'
+format = '[[ $symbol( $version) ](fg:white bg:black)]($style)'
 
 [kotlin]
 symbol = ""
 style = "bg:black"
-format = '[[ $symbol( $version) ](fg:crust bg:green)]($style)'
+format = '[[ $symbol( $version) ](fg:white bg:black)]($style)'
 
 [haskell]
 symbol = ""
 style = "bg:black"
-format = '[[ $symbol( $version) ](fg:crust bg:green)]($style)'
+format = '[[ $symbol( $version) ](fg:white bg:black)]($style)'
 
 [python]
 symbol = ""
