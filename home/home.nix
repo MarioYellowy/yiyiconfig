@@ -92,4 +92,5 @@
     gtk.enable = true;
     x11.enable = true;
   };
+  services.easyeffects.enable = true;
 }
