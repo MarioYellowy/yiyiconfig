@@ -155,7 +155,7 @@
         smoothScrollEnabled = true;
       };
       ui = {
-        fontDefault = "";
+        fontDefault = "JetBrainsMono Nerd Font";
         fontFixed = "";
         fontDefaultScale = 1;
         fontFixedScale = 1;
