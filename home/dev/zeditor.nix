@@ -20,6 +20,7 @@
       "everforest-blurred"
       "env"
       "nu"
+      "make"
     ];
 
     userSettings = {
