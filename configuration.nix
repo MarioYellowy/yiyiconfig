@@ -12,6 +12,7 @@
 {
   imports = [
     ./hardware-configuration.nix
+    ./virtualBox.nix
   ];
 
   # Bootloader.
@@ -138,6 +139,7 @@
     extraGroups = [
       "networkmanager"
       "wheel"
+      "vboxusers"
     ];
   };
 
