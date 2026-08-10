@@ -109,6 +109,8 @@
     #media-session.enable = true;
   };
 
+  programs.dconf.enable = true;
+
   services.postgresql = {
     package = pkgs.postgresql;
     enable = true;
