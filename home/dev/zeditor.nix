@@ -9,7 +9,6 @@
       "git-firefly"
       "toml"
       "html"
-      "live-server"
       "just"
       "slint"
       "java"
@@ -120,6 +119,19 @@
       show_completions_on_input = true;
       show_completion_documentation = true;
       load_direnv = "direct";
+      format_on_save = "on";
+      colorize_brackets = true;
+
+      title_bar = {
+        show_branch_status_icon = true;
+      };
+      search = {
+        include_ignored = true;
+      };
+
+      prettier = {
+        allowed = false;
+      };
 
       scrollbar = {
         diagnostics = "all";
@@ -129,14 +141,14 @@
         provider = "none";
       };
 
-      active_pane_modifiers = {
-        border_size = 0.1;
-      };
-
       tabs = {
         close_position = "right";
         file_icons = true;
         git_status = true;
+      };
+
+      active_pane_modifiers = {
+        border_size = 0.1;
       };
 
       git = {
