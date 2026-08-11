@@ -177,6 +177,7 @@
 
       (with pkgs-unstable; [
         brave
+        zed-discord-presence
       ]);
 
   programs.nix-ld.enable = true;
