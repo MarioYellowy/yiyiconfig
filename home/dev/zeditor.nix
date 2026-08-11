@@ -21,6 +21,7 @@
       "env"
       "nu"
       "make"
+      "discord-presence"
     ];
 
     userSettings = {
