@@ -42,14 +42,14 @@
           ensure_final_newline_on_save = true;
         };
         JavaScript = {
-          language_servers = [ "typescript-language-server" ];
+          language_servers = [ "vtsls" ];
           format_on_save = "on";
           formatter = "language_server";
           soft_wrap = "bounded";
           ensure_final_newline_on_save = true;
         };
         TypeScript = {
-          language_servers = [ "typescript-language-server" ];
+          language_servers = [ "vtsls" ];
           format_on_save = "on";
           formatter = "language_server";
           soft_wrap = "bounded";
