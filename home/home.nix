@@ -37,7 +37,7 @@
 
       # Nix
       nixd
-      nixfmt
+      alejandra
 
       # Java
       jdt-language-server

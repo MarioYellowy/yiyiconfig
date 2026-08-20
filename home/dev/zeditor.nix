@@ -28,7 +28,7 @@
       disable_ai = true;
       languages = {
         Nix = {
-          language_servers = [ "nixd" ];
+          language_servers = [ "alejandra" ];
           format_on_save = "on";
           formatter = "language_server";
           soft_wrap = "bounded";
