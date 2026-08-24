@@ -221,7 +221,7 @@
                   suppressWhenArgumentMatchesName = false;
                 };
                 parameterTypes = {
-                  enabled = true;
+                  enabled = false;
                 };
                 variableTypes = {
                   enabled = false;
@@ -245,7 +245,7 @@
                   suppressWhenArgumentMatchesName = false;
                 };
                 parameterTypes = {
-                  enabled = true;
+                  enabled = false;
                 };
                 variableTypes = {
                   enabled = false;
