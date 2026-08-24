@@ -1,4 +1,8 @@
-{ pkgs, pkgs-unstable, ... }: {
+{
+  pkgs,
+  pkgs-unstable,
+  ...
+}: {
   home.username = "mario";
   home.homeDirectory = "/home/mario";
   home.stateVersion = "26.05";
@@ -56,7 +60,6 @@
       lldb
       clang-tools
       handbrake
-
     ])
     ++ (with pkgs-unstable; [
       skyemu

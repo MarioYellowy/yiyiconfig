@@ -1,4 +1,4 @@
-{ ... }: {
+{...}: {
   programs.nushell = {
     enable = true;
     envFile.source = ./nushell/env.nu;

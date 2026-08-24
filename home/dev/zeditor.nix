@@ -1,5 +1,4 @@
-{ pkgs-unstable, ... }: {
-
+{pkgs-unstable, ...}: {
   programs.zed-editor = {
     enable = true;
     package = pkgs-unstable.zed-editor;
@@ -28,77 +27,82 @@
       disable_ai = true;
       languages = {
         Nix = {
-          language_servers = [ "alejandra" ];
+          language_servers = ["nixd"];
           format_on_save = "on";
-          formatter = "language_server";
+          formatter = {
+            external = {
+              command = "alejandra";
+              arguments = ["--quiet" "--"];
+            };
+          };
           soft_wrap = "bounded";
           ensure_final_newline_on_save = true;
         };
         Rust = {
-          language_servers = [ "rust-analyzer" ];
+          language_servers = ["rust-analyzer"];
           format_on_save = "on";
           formatter = "language_server";
           soft_wrap = "bounded";
           ensure_final_newline_on_save = true;
         };
         JavaScript = {
-          language_servers = [ "vtsls" ];
+          language_servers = ["vtsls"];
           format_on_save = "on";
           formatter = "language_server";
           soft_wrap = "bounded";
           ensure_final_newline_on_save = true;
         };
         TypeScript = {
-          language_servers = [ "vtsls" ];
+          language_servers = ["vtsls"];
           format_on_save = "on";
           formatter = "language_server";
           soft_wrap = "bounded";
           ensure_final_newline_on_save = true;
         };
         C = {
-          language_servers = [ "clangd" ];
+          language_servers = ["clangd"];
           format_on_save = "on";
           formatter = "language_server";
           soft_wrap = "bounded";
           ensure_final_newline_on_save = true;
         };
         "C++" = {
-          language_servers = [ "clangd" ];
+          language_servers = ["clangd"];
           format_on_save = "on";
           formatter = "language_server";
           soft_wrap = "bounded";
           ensure_final_newline_on_save = true;
         };
         Java = {
-          language_servers = [ "jdtls" ];
+          language_servers = ["jdtls"];
           format_on_save = "on";
           formatter = "language_server";
           soft_wrap = "bounded";
           ensure_final_newline_on_save = true;
         };
         Just = {
-          language_servers = [ "just-lsp" ];
+          language_servers = ["just-lsp"];
           format_on_save = "on";
           formatter = "language_server";
           soft_wrap = "bounded";
           ensure_final_newline_on_save = true;
         };
         Slint = {
-          language_servers = [ "slint-lsp" ];
+          language_servers = ["slint-lsp"];
           format_on_save = "on";
           formatter = "language_server";
           soft_wrap = "bounded";
           ensure_final_newline_on_save = true;
         };
         Lua = {
-          language_servers = [ "lua-language-server" ];
+          language_servers = ["lua-language-server"];
           format_on_save = "on";
           formatter = "language_server";
           soft_wrap = "bounded";
           ensure_final_newline_on_save = true;
         };
         Markdown = {
-          language_servers = [ "harper-ls" ];
+          language_servers = ["harper-ls"];
           format_on_save = "on";
           formatter = "language_server";
           soft_wrap = "bounded";
@@ -205,6 +209,61 @@
         show_parameter_hints = true;
         show_other_hints = true;
         show_background = false;
+      };
+
+      lsp = {
+        vtsls = {
+          settings = {
+            javascript = {
+              inlayHints = {
+                parameterNames = {
+                  enabled = "all";
+                  suppressWhenArgumentMatchesName = false;
+                };
+                parameterTypes = {
+                  enabled = true;
+                };
+                variableTypes = {
+                  enabled = false;
+                  suppressWhenTypeMatchesName = true;
+                };
+                propertyDeclarationTypes = {
+                  enabled = false;
+                };
+                functionLikeReturnTypes = {
+                  enabled = true;
+                };
+                enumMemberValues = {
+                  enabled = true;
+                };
+              };
+            };
+            typescript = {
+              inlayHints = {
+                parameterNames = {
+                  enabled = "all";
+                  suppressWhenArgumentMatchesName = false;
+                };
+                parameterTypes = {
+                  enabled = true;
+                };
+                variableTypes = {
+                  enabled = false;
+                  suppressWhenTypeMatchesName = true;
+                };
+                propertyDeclarationTypes = {
+                  enabled = false;
+                };
+                functionLikeReturnTypes = {
+                  enabled = true;
+                };
+                enumMemberValues = {
+                  enabled = true;
+                };
+              };
+            };
+          };
+        };
       };
 
       terminal = {

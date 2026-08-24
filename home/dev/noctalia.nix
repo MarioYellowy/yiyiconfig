@@ -1,5 +1,4 @@
-{ inputs, ... }:
-{
+{inputs, ...}: {
   imports = [
     inputs.noctalia.homeModules.default
   ];
@@ -12,7 +11,7 @@
       bar = {
         barType = "floating";
         position = "top";
-        monitors = [ ];
+        monitors = [];
         density = "default";
         showOutline = false;
         showCapsule = true;
@@ -88,7 +87,7 @@
         rightClickAction = "controlCenter";
         rightClickFollowMouse = true;
         rightClickCommand = "";
-        screenOverrides = [ ];
+        screenOverrides = [];
       };
       general = {
         avatarImage = "/home/mario/Pictures/Profile.jpeg";
@@ -124,7 +123,7 @@
         clockStyle = "custom";
         clockFormat = "h:mm AP";
         passwordChars = false;
-        lockScreenMonitors = [ ];
+        lockScreenMonitors = [];
         lockScreenBlur = 0;
         lockScreenTint = 0;
         keybinds = {
@@ -204,7 +203,7 @@
         enabled = true;
         overviewEnabled = false;
         directory = "/home/mario/Pictures/background.png";
-        monitorDirectories = [ ];
+        monitorDirectories = [];
         enableMultiMonitorDirectories = false;
         showHiddenFiles = false;
         viewMode = "single";
@@ -245,7 +244,7 @@
         wallhavenResolutionWidth = "";
         wallhavenResolutionHeight = "";
         sortOrder = "name";
-        favorites = [ ];
+        favorites = [];
       };
       appLauncher = {
         enableClipboardHistory = true;
@@ -257,7 +256,7 @@
         clipboardWatchTextCommand = "wl-paste --type text --watch cliphist store";
         clipboardWatchImageCommand = "wl-paste --type image --watch cliphist store";
         position = "center";
-        pinnedApps = [ ];
+        pinnedApps = [];
         sortByMostUsed = true;
         terminalCommand = "alacritty -e";
         customLaunchPrefixEnabled = false;
@@ -370,8 +369,8 @@
         floatingRatio = 1;
         size = 1;
         onlySameOutput = true;
-        monitors = [ ];
-        pinnedApps = [ ];
+        monitors = [];
+        pinnedApps = [];
         colorizeIcons = false;
         showLauncherIcon = false;
         launcherPosition = "end";
@@ -452,7 +451,7 @@
         enabled = true;
         enableMarkdown = false;
         density = "default";
-        monitors = [ ];
+        monitors = [];
         location = "top_right";
         overlayLayer = true;
         backgroundOpacity = 1;
@@ -490,7 +489,7 @@
           1
           2
         ];
-        monitors = [ ];
+        monitors = [];
       };
       audio = {
         volumeStep = 5;
@@ -498,7 +497,7 @@
         spectrumFrameRate = 30;
         visualizerType = "linear";
         spectrumMirrored = true;
-        mprisBlacklist = [ ];
+        mprisBlacklist = [];
         preferredPlayer = "";
         volumeFeedback = false;
         volumeFeedbackSoundFile = "";
@@ -507,7 +506,7 @@
         brightnessStep = 5;
         enforceMinimum = true;
         enableDdcSupport = false;
-        backlightDeviceMappings = [ ];
+        backlightDeviceMappings = [];
       };
       colorSchemes = {
         useWallpaperColors = true;
@@ -521,7 +520,7 @@
         syncGsettings = true;
       };
       templates = {
-        activeTemplates = [ ];
+        activeTemplates = [];
         enableUserTheming = false;
       };
       nightLight = {
@@ -568,9 +567,8 @@
         overviewEnabled = true;
         gridSnap = false;
         gridSnapScale = false;
-        monitorWidgets = [ ];
+        monitorWidgets = [];
       };
     };
   };
-
 }

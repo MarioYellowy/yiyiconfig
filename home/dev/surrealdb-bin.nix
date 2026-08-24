@@ -6,7 +6,6 @@
   gcc-unwrapped,
   lib,
 }:
-
 stdenv.mkDerivation rec {
   pname = "surrealdb-bin";
   version = "3.1.0";
@@ -16,7 +15,7 @@ stdenv.mkDerivation rec {
     hash = "sha256-qKffirEffeIq4UxkpGCepxRlx/if57Ai4Cn63cWHnkI=";
   };
 
-  nativeBuildInputs = [ autoPatchelfHook ];
+  nativeBuildInputs = [autoPatchelfHook];
   buildInputs = [
     glibc
     gcc-unwrapped
@@ -37,7 +36,7 @@ stdenv.mkDerivation rec {
     description = "SurrealDB - scalable document-graph database";
     homepage = "https://surrealdb.com";
     license = licenses.bsl11;
-    platforms = [ "x86_64-linux" ];
+    platforms = ["x86_64-linux"];
     mainProgram = "surreal";
   };
 }

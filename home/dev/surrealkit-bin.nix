@@ -15,7 +15,7 @@ stdenv.mkDerivation rec {
     hash = "sha256-aG1X2qwT6p88K3U9jU7HXdx4uLru+KiXe79iEQkYYSI=";
   };
 
-  nativeBuildInputs = [ autoPatchelfHook ];
+  nativeBuildInputs = [autoPatchelfHook];
 
   buildInputs = [
     glibc
@@ -37,7 +37,7 @@ stdenv.mkDerivation rec {
     description = "SurrealKit - migrations, seeding and testing for SurrealDB";
     homepage = "https://github.com/surrealdb/surrealkit";
     license = licenses.asl20;
-    platforms = [ "x86_64-linux" ];
+    platforms = ["x86_64-linux"];
     mainProgram = "surrealkit";
   };
 }

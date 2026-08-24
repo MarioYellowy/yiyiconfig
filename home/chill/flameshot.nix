@@ -1,4 +1,4 @@
-{ pkgs, ... }: {
+{pkgs, ...}: {
   services.flameshot = {
     enable = true;
     settings = {
@@ -8,7 +8,7 @@
       };
     };
   };
-  home.packages = with pkgs; [ grim ];
+  home.packages = with pkgs; [grim];
 
   systemd.user.services.flameshot = {
     Service = {

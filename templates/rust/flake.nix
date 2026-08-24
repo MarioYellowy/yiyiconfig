@@ -9,32 +9,31 @@
     };
   };
 
-  outputs =
-    { nixpkgs, rust-overlay, ... }:
-    let
-      system = "x86_64-linux";
-      overlays = [ (import rust-overlay) ];
-      pkgs = import nixpkgs { inherit system overlays; };
+  outputs = {
+    nixpkgs,
+    rust-overlay,
+    ...
+  }: let
+    system = "x86_64-linux";
+    overlays = [(import rust-overlay)];
+    pkgs = import nixpkgs {inherit system overlays;};
 
-      rustToolchain = pkgs.rust-bin.stable."1.95.0".default.override {
-        extensions = [
-          "rust-src"
-          "rust-analyzer"
-          "rustfmt"
-          "clippy"
-        ];
-
-      };
-    in
-    {
-      devShells.${system}.default = pkgs.mkShell {
-        buildInputs = [
-          rustToolchain
-
-          pkgs.pkg-config
-          pkgs.gcc
-        ];
-      };
+    rustToolchain = pkgs.rust-bin.stable."1.95.0".default.override {
+      extensions = [
+        "rust-src"
+        "rust-analyzer"
+        "rustfmt"
+        "clippy"
+      ];
     };
+  in {
+    devShells.${system}.default = pkgs.mkShell {
+      buildInputs = [
+        rustToolchain
 
+        pkgs.pkg-config
+        pkgs.gcc
+      ];
+    };
+  };
 }
