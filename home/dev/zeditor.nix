@@ -231,7 +231,7 @@
                   enabled = false;
                 };
                 functionLikeReturnTypes = {
-                  enabled = true;
+                  enabled = false;
                 };
                 enumMemberValues = {
                   enabled = true;
@@ -255,7 +255,7 @@
                   enabled = false;
                 };
                 functionLikeReturnTypes = {
-                  enabled = true;
+                  enabled = false;
                 };
                 enumMemberValues = {
                   enabled = true;
