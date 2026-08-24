@@ -184,7 +184,7 @@
         file_icons = true;
         folder_icons = true;
         drag_and_drop = true;
-        hide_root = false;
+        hide_root = true;
       };
 
       session = {
