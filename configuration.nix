@@ -109,6 +109,7 @@
 
   services.postgresql = {
     package = pkgs.postgresql;
+    extensions = ps: with ps; [pg_uuidv7];
     enable = true;
     ensureDatabases = [
       "mydatabase"
