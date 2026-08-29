@@ -46,6 +46,7 @@
 
   # Enable networking
   networking.networkmanager.enable = true;
+  networking.nameservers = ["1.1.1.1"];
 
   # Set your time zone.
   time.timeZone = "America/Mexico_City";
@@ -156,6 +157,7 @@
       libreoffice
       nautilus
       vlc
+      dnsutils
 
       (inputs.pixie-sddm.packages.${pkgs.stdenv.hostPlatform.system}.pixie-sddm.override {
         background = ./assets/background.png;

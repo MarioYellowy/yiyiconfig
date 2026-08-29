@@ -56,12 +56,12 @@ def ssh-keys-load-missing [] {
     }
 }
 
-# SurrealDB dev instance
-def surreal-dev [] {
-    surreal start --user root --pass root --bind 127.0.0.1:8000 $"surrealkv://($env.HOME)/.local/share/surrealdb/dev"
-}
+# # SurrealDB dev instance
+# def surreal-dev [] {
+#     surreal start --user root --pass root --bind 127.0.0.1:8000 $"surrealkv://($env.HOME)/.local/share/surrealdb/dev"
+# }
 
-# SurrealDB KV local project
-def surreal-project [] {
-    surreal start --user root --pass root --bind 127.0.0.1:8001 $"surrealkv://($env.PWD)/data/surreal"
-}
+# # SurrealDB KV local project
+# def surreal-project [] {
+#     surreal start --user root --pass root --bind 127.0.0.1:8001 $"surrealkv://($env.PWD)/data/surreal"
+# }
