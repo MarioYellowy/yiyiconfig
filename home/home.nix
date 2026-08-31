@@ -42,6 +42,7 @@
       # Nix
       nixd
       alejandra
+      biome
 
       # Java
       jdt-language-server

@@ -21,6 +21,7 @@
       "nu"
       "make"
       "discord-presence"
+      "biome"
     ];
 
     userSettings = {
@@ -46,16 +47,24 @@
           ensure_final_newline_on_save = true;
         };
         JavaScript = {
-          language_servers = ["vtsls"];
+          language_servers = ["vtsls" "biome"];
           format_on_save = "on";
-          formatter = "language_server";
+          formatter = {
+            language_server = {
+              name = "biome";
+            };
+          };
           soft_wrap = "bounded";
           ensure_final_newline_on_save = true;
         };
         TypeScript = {
-          language_servers = ["vtsls"];
+          language_servers = ["vtsls" "biome"];
           format_on_save = "on";
-          formatter = "language_server";
+          formatter = {
+            language_server = {
+              name = "biome";
+            };
+          };
           soft_wrap = "bounded";
           ensure_final_newline_on_save = true;
         };
@@ -140,6 +149,8 @@
       load_direnv = "direct";
       format_on_save = "on";
       colorize_brackets = true;
+      show_wrap_guides = true;
+      preferred_line_length = 90;
 
       title_bar = {
         show_branch_status_icon = true;

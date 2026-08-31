@@ -46,7 +46,7 @@
 
   # Enable networking
   networking.networkmanager.enable = true;
-  networking.nameservers = ["1.1.1.1"];
+  # networking.nameservers = ["1.1.1.1"];
 
   # Set your time zone.
   time.timeZone = "America/Mexico_City";
