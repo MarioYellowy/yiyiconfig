@@ -22,6 +22,7 @@
       "make"
       "discord-presence"
       "biome"
+      "harper"
     ];
 
     userSettings = {
