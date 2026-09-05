@@ -18,6 +18,8 @@
       url = "github:noctalia-dev/noctalia/legacy-v4";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    sonora.url = "github:nolight132/sonora";
   };
   outputs = inputs @ {
     self,

@@ -28,6 +28,7 @@
     ./chill/prismlauncher.nix
     ./chill/flameshot.nix
     ./chill/obs.nix
+    ./chill/sonora.nix
   ];
 
   home.packages =
