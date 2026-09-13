@@ -61,7 +61,10 @@
       gdb
       lldb
       clang-tools
+
+      # Extras
       handbrake
+      openshot-qt
     ])
     ++ (with pkgs-unstable; [
       skyemu
@@ -73,7 +76,6 @@
       package-version-server
       teams-for-linux
       pear-desktop
-      openshot-qt
     ]);
 
   gtk = {
