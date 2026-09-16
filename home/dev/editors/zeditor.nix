@@ -194,7 +194,6 @@
         button = true;
         dock = "left";
         file_icons = true;
-        folder_icons = true;
         drag_and_drop = true;
         hide_root = true;
       };
