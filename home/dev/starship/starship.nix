@@ -9,5 +9,5 @@
     presets = [];
   };
 
-  home.file.".config/starship.toml".source = ./starship/starship.toml;
+  home.file.".config/starship.toml".source = ./starship.toml;
 }
