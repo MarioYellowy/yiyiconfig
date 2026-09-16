@@ -1,6 +1,7 @@
 local terminal    = "alacritty"
 local fileManager = "nautilus"
-local menu        = "noctalia ipc call launcher toggle"
+local ipc         = "noctalia msg "
+local menu        = ipc .. "panel-toggle launcher"
 local mainMod     = "SUPER"
 
 hl.bind(mainMod .. " + Super_L", hl.dsp.exec_cmd(menu), { release = true })
