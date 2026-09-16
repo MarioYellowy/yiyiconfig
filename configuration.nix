@@ -156,6 +156,7 @@
       unzip
       libreoffice
       nautilus
+      baobab
       vlc
       dnsutils
 
