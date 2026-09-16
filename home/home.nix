@@ -19,7 +19,6 @@
     ./dev/carapace.nix
     ./dev/neovim.nix
     ./dev/starship.nix
-    ./dev/noctalia.nix
     ./dev/zeditor.nix
     ./dev/vscode.nix
     ./dev/direnv.nix
@@ -28,6 +27,7 @@
     ./chill/prismlauncher.nix
     ./chill/flameshot.nix
     ./chill/obs.nix
+    ./chill/noctalia/noctalia.nix
   ];
 
   home.packages =
@@ -74,7 +74,6 @@
       wev
       package-version-server
       teams-for-linux
-      pear-desktop
     ]);
 
   gtk = {

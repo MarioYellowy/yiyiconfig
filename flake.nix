@@ -15,11 +15,9 @@
     pixie-sddm.url = "github:xCaptaiN09/pixie-sddm";
 
     noctalia = {
-      url = "github:noctalia-dev/noctalia/legacy-v4";
-      inputs.nixpkgs.follows = "nixpkgs";
+      url = "github:noctalia-dev/noctalia";
+      inputs.nixpkgs.follows = "nixpkgs-unstable";
     };
-
-    sonora.url = "github:nolight132/sonora";
   };
   outputs = inputs @ {
     self,

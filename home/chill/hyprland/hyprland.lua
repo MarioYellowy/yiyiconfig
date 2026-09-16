@@ -14,7 +14,7 @@ hl.env("XCURSOR_SIZE", "20")
 hl.env("HYPRCURSOR_SIZE", "20")
 
 hl.on("hyprland.start", function()
-    hl.exec_cmd("noctalia-shell")
+    hl.exec_cmd("noctalia")
 end)
 
 hl.env("XCURSOR_THEME", "Bibata-Modern-Classic")
