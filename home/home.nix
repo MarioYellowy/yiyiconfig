@@ -8,71 +8,39 @@
   home.stateVersion = "26.05";
 
   imports = [
-    ./dev/git.nix
-    ./dev/nushell.nix
-    ./dev/alacritty.nix
-    ./dev/atuin.nix
-    ./dev/bottom.nix
-    ./dev/fastfetch.nix
-    ./dev/gcc.nix
-    ./dev/firefox.nix
-    ./dev/carapace.nix
-    ./dev/neovim.nix
-    ./dev/starship.nix
-    ./dev/zeditor.nix
-    ./dev/vscode.nix
+    ./dev/editors/editors.nix
+    ./dev/languages/languages.nix
+    ./dev/nushell/nushell.nix
+    ./dev/starship/starship.nix
+    ./dev/terminal_tools/terminal_tools.nix
     ./dev/direnv.nix
+    ./dev/firefox.nix
+    ./dev/gcc.nix
+    ./dev/git.nix
+    ./chill/games/games.nix
+    ./chill/hyprland/hyprland.nix
+    ./chill/noctalia/noctalia.nix
     ./chill/discord.nix
-    ./chill/hyprland.nix
-    ./chill/prismlauncher.nix
     ./chill/flameshot.nix
     ./chill/obs.nix
-    ./chill/noctalia/noctalia.nix
   ];
 
   home.packages =
     (with pkgs; [
-      # LSPs and Dev Tools
-      rust-analyzer
-      just-lsp
-      slint-lsp
-      lua-language-server
-      harper
-
-      # Nix
-      nixd
-      alejandra
-      biome
-
-      # Java
-      jdt-language-server
-      maven
-      gradle
-      jetbrains.idea-oss
-
       # SurrealDB
       surrealdb-bin
       surrealkit-bin
-
-      # C/C++
-      gcc
-      cmake
-      gdb
-      lldb
-      clang-tools
 
       # Extras
       handbrake
       openshot-qt
     ])
     ++ (with pkgs-unstable; [
-      skyemu
       gimp
       postman
       tree
       whatsapp-electron
       wev
-      package-version-server
       teams-for-linux
     ]);
 
