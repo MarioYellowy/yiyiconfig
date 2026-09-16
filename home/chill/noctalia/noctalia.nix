@@ -13,7 +13,7 @@
     settings = {
       wallpaper = {
         enabled = true;
-        default.path = "/home/mario/Pictures/background.png";
+        default.path = ../../../assets/background.png;
         transition_on_startup = true;
       };
 
@@ -23,7 +23,7 @@
 
       audio = {
         enable_sounds = true;
-        notification_sound = "/home/mario/Projects/yiyiconfig/assets/notification.wav";
+        notification_sound = ../../../assets/notification.wav;
       };
     };
   };
