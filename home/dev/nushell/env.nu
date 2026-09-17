@@ -5,7 +5,10 @@ do --env {
 
     if ($ssh_agent_file | path exists) {
         let ssh_agent_env = open ($ssh_agent_file)
-        if ($"/proc/($ssh_agent_env.SSH_AGENT_PID)" | path exists) {
+        if (
+                ($"/proc/($ssh_agent_env.SSH_AGENT_PID)" | path exists)
+                and ($ssh_agent_env.SSH_AUTH_SOCK | path exists)
+            ) {
             load-env $ssh_agent_env
             return
         } else {
