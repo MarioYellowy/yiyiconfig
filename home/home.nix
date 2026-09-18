@@ -8,18 +8,18 @@
   home.stateVersion = "26.05";
 
   imports = [
-    ./dev/editors/editors.nix
-    ./dev/languages/languages.nix
-    ./dev/nushell/nushell.nix
-    ./dev/starship/starship.nix
-    ./dev/terminal_tools/terminal_tools.nix
+    ./dev/editors
+    ./dev/languages
+    ./dev/nushell
+    ./dev/starship
+    ./dev/terminal_tools
     ./dev/direnv.nix
     ./dev/firefox.nix
     ./dev/gcc.nix
     ./dev/git.nix
-    ./chill/games/games.nix
-    ./chill/hyprland/hyprland.nix
-    ./chill/noctalia/noctalia.nix
+    ./chill/games
+    ./chill/hyprland
+    ./chill/noctalia
     ./chill/discord.nix
     ./chill/flameshot.nix
     ./chill/obs.nix
