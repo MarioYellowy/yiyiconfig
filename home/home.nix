@@ -23,7 +23,7 @@
     ./chill/discord.nix
     ./chill/flameshot.nix
     ./chill/obs.nix
-    ./services
+    ./dev/services
   ];
 
   home.packages =
