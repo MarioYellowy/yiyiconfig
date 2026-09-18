@@ -23,6 +23,7 @@
     ./chill/discord.nix
     ./chill/flameshot.nix
     ./chill/obs.nix
+    ./services
   ];
 
   home.packages =
@@ -66,5 +67,4 @@
     gtk.enable = true;
     x11.enable = true;
   };
-  services.easyeffects.enable = true;
 }
