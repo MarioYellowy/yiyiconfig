@@ -5,6 +5,6 @@
     ./boot.nix
     ./fonts.nix
     ./hardware-configuration.nix
-    ./users
+    ./users.nix
   ];
 }
