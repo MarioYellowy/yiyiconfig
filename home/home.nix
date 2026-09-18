@@ -34,6 +34,7 @@
       # Extras
       handbrake
       openshot-qt
+      google-chrome
     ])
     ++ (with pkgs-unstable; [
       gimp
