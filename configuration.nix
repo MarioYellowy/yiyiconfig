@@ -9,7 +9,6 @@
 }: {
   imports = [
     ./hardware-configuration.nix
-    ./virtualBox.nix
   ];
 
   # Bootloader.
@@ -57,76 +56,7 @@
   # Select internationalisation properties.
   i18n.defaultLocale = "en_US.UTF-8";
 
-  services.power-profiles-daemon.enable = true;
-  services.upower.enable = true;
-  services.dbus.enable = true;
-  services.gvfs.enable = true;
-  services.gnome.gnome-keyring.enable = true;
-
-  # Enable the X11 windowing system.
-  services.xserver.enable = true;
-
-  services.displayManager.sddm = {
-    enable = true;
-
-    wayland.enable = false;
-    package = pkgs.kdePackages.sddm;
-    extraPackages = with pkgs.kdePackages; [
-      qtsvg
-      qtdeclarative
-      qt5compat
-    ];
-
-    theme = "pixie";
-  };
-
-  # Disable the GNOME Desktop Environment.
-  services.displayManager.gdm.enable = false;
-  services.desktopManager.gnome.enable = false;
-
-  # Configure keymap in X11
-  services.xserver.xkb = {
-    layout = "us";
-    variant = "";
-  };
-
-  # Enable CUPS to print documents.
-  services.printing.enable = true;
-
-  # Enable sound with pipewire.
-  services.pulseaudio.enable = false;
   security.rtkit.enable = true;
-  services.pipewire = {
-    enable = true;
-    alsa.enable = true;
-    alsa.support32Bit = true;
-    pulse.enable = true;
-    # If you want to use JACK applications, uncomment this
-    #jack.enable = true;
-
-    # use the example session manager (no others are packaged yet so this is enabled by default,
-    # no need to redefine it in your config for now)
-    #media-session.enable = true;
-  };
-
-  programs.dconf.enable = true;
-
-  services.postgresql = {
-    package = pkgs.postgresql;
-    extensions = ps: with ps; [pg_uuidv7];
-    enable = true;
-    ensureDatabases = [
-      "mydatabase"
-    ];
-    authentication = pkgs.lib.mkOverride 10 ''
-      #type database DBuser auth-method
-      local all      all    trust
-      host  all      all    127.0.0.1/32   trust
-      host  all      all    ::1/128        trust
-    '';
-  };
-
-  programs.hyprland.enable = true;
 
   xdg.portal.enable = true;
   xdg.portal.extraPortals = [pkgs.xdg-desktop-portal-hyprland];
@@ -145,7 +75,8 @@
     ];
   };
 
-  programs.steam.enable = true;
+  virtualisation.virtualbox.host.enable = true;
+  users.extraGroups.vboxusers.members = ["mario"];
 
   environment.systemPackages =
     (with pkgs; [
@@ -180,14 +111,6 @@
       brave
       zed-discord-presence
     ]);
-
-  programs.nix-ld.enable = true;
-  programs.nix-ld.libraries = with pkgs; [
-    stdenv.cc.cc
-    zlib
-    openssl
-    libuv
-  ];
 
   fonts.packages = with pkgs; [
     nerd-fonts.jetbrains-mono
