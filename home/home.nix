@@ -29,7 +29,7 @@
   home.packages =
     (with pkgs; [
       # SurrealDB
-      surrealdb-bin
+      #surrealdb-bin
       surrealkit-bin
 
       # Extras
@@ -44,6 +44,7 @@
       whatsapp-electron
       wev
       teams-for-linux
+      surrealdb
     ]);
 
   gtk = {
