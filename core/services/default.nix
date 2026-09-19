@@ -2,7 +2,7 @@
   imports = [
     ./pipewire.nix
     ./postgresql.nix
-    ./sddm.nix
+    ./greeter.nix
   ];
 
   services.power-profiles-daemon.enable = true;
