@@ -12,10 +12,13 @@
 
     hyprland.url = "github:hyprwm/Hyprland";
 
-    pixie-sddm.url = "github:xCaptaiN09/pixie-sddm";
-
     noctalia = {
       url = "github:noctalia-dev/noctalia";
+      inputs.nixpkgs.follows = "nixpkgs-unstable";
+    };
+
+    noctalia-greeter = {
+      url = "github:noctalia-dev/noctalia-greeter";
       inputs.nixpkgs.follows = "nixpkgs-unstable";
     };
   };
@@ -25,7 +28,6 @@
     nixpkgs-unstable,
     home-manager,
     hyprland,
-    pixie-sddm,
     ...
   }: let
     system = "x86_64-linux";
@@ -48,6 +50,7 @@
       specialArgs = {inherit inputs pkgs-unstable;};
       modules = [
         ./configuration.nix
+        inputs.noctalia-greeter.nixosModules.default
         {
           nixpkgs.config.allowUnfree = true;
           nixpkgs.overlays = [
