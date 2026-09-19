@@ -1,5 +1,6 @@
 local terminal    = "alacritty"
 local fileManager = "nautilus"
+local screenshot  = "flameshot gui"
 local ipc         = "noctalia msg "
 local menu        = ipc .. "panel-toggle launcher"
 local mainMod     = "SUPER"
@@ -12,7 +13,7 @@ hl.bind(mainMod .. " + E", hl.dsp.exec_cmd(fileManager))
 hl.bind(mainMod .. " + V", hl.dsp.window.float({ action = "toggle" }))
 
 hl.bind(mainMod .. " + P", function()
-    hl.exec_cmd("flameshot gui")
+    hl.exec_cmd(screenshot)
 end)
 hl.bind(mainMod .. " + J", hl.dsp.layout("togglesplit"))
 
