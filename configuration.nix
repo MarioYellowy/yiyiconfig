@@ -1,7 +1,6 @@
 {
   pkgs,
   pkgs-unstable,
-  inputs,
   ...
 }: {
   imports = [
@@ -18,9 +17,6 @@
     "nix-command"
     "flakes"
   ];
-
-  nix.gc = {
-  };
 
   networking.hostName = "nixos"; # Define your hostname.
 
@@ -56,18 +52,6 @@
       vlc
       dnsutils
       loupe
-
-      (inputs.pixie-sddm.packages.${pkgs.stdenv.hostPlatform.system}.pixie-sddm.override {
-        background = ./assets/background.png;
-        avatar = ./assets/Profile.jpeg;
-        primaryColor = "#B3C8FF";
-        accentColor = "#3F5F91";
-        autoColor = true;
-        backgroundColor = "#1A1C1E";
-        textColor = "#E2E2E6";
-        fontFamily = "JetBrains Mono";
-        fontSize = 13;
-      })
     ])
     ++ (with pkgs-unstable; [
       brave
