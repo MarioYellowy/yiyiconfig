@@ -12,8 +12,6 @@ hl.bind(mainMod .. " + E", hl.dsp.exec_cmd(fileManager))
 hl.bind(mainMod .. " + V", hl.dsp.window.float({ action = "toggle" }))
 
 hl.bind(mainMod .. " + P", function()
-    local mon = hl.get_active_monitor()
-    local n = mon and mon.id or 0
     hl.exec_cmd("flameshot gui")
 end)
 hl.bind(mainMod .. " + J", hl.dsp.layout("togglesplit"))
