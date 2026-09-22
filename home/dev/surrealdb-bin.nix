@@ -8,11 +8,11 @@
 }:
 stdenv.mkDerivation rec {
   pname = "surrealdb-bin";
-  version = "3.1.0";
+  version = "3.2.4";
 
   src = fetchurl {
     url = "https://github.com/surrealdb/surrealdb/releases/download/v${version}/surreal-v${version}.linux-amd64.tgz";
-    hash = "sha256-qKffirEffeIq4UxkpGCepxRlx/if57Ai4Cn63cWHnkI=";
+    hash = "sha256:aaf9c8d388248db63e10300385c94ec9f85ef4430e79f9569886045d896df369";
   };
 
   nativeBuildInputs = [autoPatchelfHook];
