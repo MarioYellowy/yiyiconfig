@@ -17,6 +17,7 @@
     ./dev/firefox.nix
     ./dev/gcc.nix
     ./dev/git.nix
+    ./dev/nh.nix
     ./chill/games
     ./chill/hyprland
     ./chill/noctalia
