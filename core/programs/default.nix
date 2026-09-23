@@ -1,5 +1,5 @@
 {...}: {
-  imports = [./nix-ld.nix];
+  imports = [./nix-ld.nix ./nh.nix];
 
   programs.dconf.enable = true;
 
