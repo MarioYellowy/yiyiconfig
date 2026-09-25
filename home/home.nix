@@ -45,6 +45,7 @@
       wev
       teams-for-linux
       #surrealdb
+      railway
     ]);
 
   gtk = {
