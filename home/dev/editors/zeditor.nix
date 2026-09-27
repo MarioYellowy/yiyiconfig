@@ -23,6 +23,7 @@
       "discord-presence"
       "biome"
       "harper"
+      "emmet"
     ];
 
     userSettings = {

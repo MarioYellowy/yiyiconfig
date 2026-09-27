@@ -34,12 +34,13 @@
   xdg.portal.enable = true;
   xdg.portal.extraPortals = [pkgs.xdg-desktop-portal-hyprland];
 
-  virtualisation.virtualbox.host.enable = true;
+  # virtualisation.virtualbox.host.enable = true;
 
   environment.systemPackages =
     (with pkgs; [
       python3
       nodejs
+      typescript
       pnpm
       jdk
       just
