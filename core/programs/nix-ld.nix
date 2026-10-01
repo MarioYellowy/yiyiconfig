@@ -5,5 +5,7 @@
     zlib
     openssl
     libuv
+    ncurses
+    libxml2
   ];
 }
