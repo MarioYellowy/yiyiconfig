@@ -61,4 +61,6 @@
   system.stateVersion = "26.05"; # Did you read the comment?
   system.autoUpgrade.enable = true;
   system.autoUpgrade.allowReboot = false;
+
+  zramSwap.enable = true;
 }

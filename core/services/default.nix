@@ -18,6 +18,11 @@
   services.displayManager.gdm.enable = false;
   services.desktopManager.gnome.enable = false;
 
+  services.earlyoom = {
+    enable = true;
+    extraArgs = ["--prefer" "^codelldb$"];
+  };
+
   # Configure keymap in X11
   services.xserver.xkb = {
     layout = "us";
