@@ -65,6 +65,7 @@
         {
           home-manager.useGlobalPkgs = true;
           home-manager.useUserPackages = true;
+          home-manager.backupFileExtension = "backup";
           home-manager.users.mario = import ./home/home.nix;
           home-manager.extraSpecialArgs = {inherit inputs pkgs-unstable;};
         }
