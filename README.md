@@ -32,6 +32,8 @@ cd yiyiconfig
 > ```
 > With that, the configuration is already done
 
+*Manual configuration*
+
 Once you already are inside the repo locally, the next step is generate your own `hardware-configuration.nix`, the repo contains a `hardware-configuration.nix` file, but the configuration doesn't gonna work if you use it, so the first step is remove this file:
 
 ```bash
