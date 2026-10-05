@@ -19,11 +19,18 @@ git clone https://github.com/MarioYellowy/yiyiconfig.git
 cd yiyiconfig
 ```
 
-My recommendation for this point is install `just`, this simplifies the process of building, but you can continue with setup process manually if you want:
-
-```bash
-nix-shell -p just
-```
+> [!NOTE]
+> My recommendation for this point is install `just`, this simplifies the process of building, but you can continue with setup process manually if you want:
+>
+> ```bash
+> nix-shell -p just
+> ```
+>
+> Once you're inside the nix-shell you can execute the next command that include all the process of building:
+> ```bash
+> just build
+> ```
+> With that, the configuration is already done
 
 Once you already are inside the repo locally, the next step is generate your own `hardware-configuration.nix`, the repo contains a `hardware-configuration.nix` file, but the configuration doesn't gonna work if you use it, so the first step is remove this file:
 
