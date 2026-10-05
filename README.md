@@ -10,6 +10,46 @@ with focus on school and dev environment, but with things for
 playing as well. Currently use [Hyprland](https://hypr.land/) as compositor and
 [Noctalia(V5)](https://noctalia.dev/) as desktop shell.
 
+## Setup
+
+In this point maybe you don't have configured your ssh, so the first step is clone with HTTPS, choose the path of your preference to clone the project first, once, run the next command:
+
+```bash
+git clone https://github.com/MarioYellowy/yiyiconfig.git
+cd yiyiconfig
+```
+
+My recommendation for this point is install `just`, this simplifies the process of building, but you can continue with setup process manually if you want:
+
+```bash
+nix-shell -p just
+```
+
+Once you already are inside the repo locally, the next step is generate your own `hardware-configuration.nix`, the repo contains a `hardware-configuration.nix` file, but the configuration doesn't gonna work if you use it, so the first step is remove this file:
+
+```bash
+rm ./core/hardware-configuration.nix
+```
+
+Once you delete it, now you can generate your own `hardware-configuration.nix` with the next command, if you are in `nushell`:
+
+```bash
+sudo nixos-generate-config --show-hardware-config out> ./core/hardware-configuration.nix
+```
+for `bash`:
+
+```bash
+sudo nixos-generate-config --show-hardware-config > ./core/hardware-configuration.nix
+```
+
+Now you have the necessary to execute the configuration, by default you can execute the next command:
+
+```bash
+sudo nixos-rebuild switch --flake .#nixos
+```
+
+And that's it.
+
 ## Structure
 
 ```nushell
