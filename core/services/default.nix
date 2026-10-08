@@ -1,8 +1,8 @@
 {...}: {
   imports = [
-    ./pipewire.nix
-    ./postgresql.nix
+    ./databases
     ./greeter.nix
+    ./pipewire.nix
   ];
 
   services.power-profiles-daemon.enable = true;
