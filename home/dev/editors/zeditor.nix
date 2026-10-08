@@ -4,26 +4,32 @@
     package = pkgs-unstable.zed-editor;
 
     extensions = [
-      "nix"
-      "git-firefly"
-      "toml"
-      "html"
-      "just"
-      "slint"
       "java"
-      "markdownlint"
-      "catppuccin-icons"
       "lua"
-      "csv"
-      "rainbow-csv"
-      "everforest-blurred"
-      "env"
+      "nix"
       "nu"
-      "make"
-      "discord-presence"
+      "prisma"
+      "slint"
+      "sql"
+
       "biome"
-      "harper"
+      "csv"
       "emmet"
+      "rainbow-csv"
+      "harper"
+      "html"
+      "markdownlint"
+      "toml"
+
+      "git-firefly"
+
+      "env"
+      "just"
+      "make"
+
+      "catppuccin-icons"
+      "discord-presence"
+      "everforest-blurred"
     ];
 
     userSettings = {
