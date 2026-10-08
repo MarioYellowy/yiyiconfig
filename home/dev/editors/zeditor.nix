@@ -60,7 +60,7 @@
           ensure_final_newline_on_save = true;
         };
         TypeScript = {
-          language_servers = ["vtsls" "biome"];
+          language_servers = ["vtsls"];
           format_on_save = "on";
           formatter = {
             language_server = {
