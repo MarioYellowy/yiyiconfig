@@ -64,7 +64,7 @@
           format_on_save = "on";
           formatter = {
             language_server = {
-              name = "biome";
+              name = "vtsls";
             };
           };
           soft_wrap = "bounded";
