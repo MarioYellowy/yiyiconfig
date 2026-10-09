@@ -105,7 +105,7 @@
           ensure_final_newline_on_save = true;
         };
         Slint = {
-          language_servers = ["slint-lsp"];
+          language_servers = ["slint"];
           format_on_save = "on";
           formatter = "language_server";
           soft_wrap = "bounded";
@@ -221,7 +221,7 @@
       toolbar = {
         quick_actions = false;
         agent_review = false;
-        code_actions = false;
+        code_actions = true;
       };
 
       inlay_hints = {
