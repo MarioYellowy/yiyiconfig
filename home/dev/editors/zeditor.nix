@@ -5,6 +5,7 @@
 
     extensions = [
       "java"
+      "leptos"
       "lua"
       "nix"
       "nu"
@@ -22,6 +23,7 @@
       "toml"
 
       "git-firefly"
+      "live-server"
 
       "env"
       "just"
