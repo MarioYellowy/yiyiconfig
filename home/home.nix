@@ -46,6 +46,7 @@
       teams-for-linux
       #surrealdb
       railway
+      inkscape
     ]);
 
   gtk = {
