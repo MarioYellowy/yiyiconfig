@@ -57,22 +57,17 @@
           ensure_final_newline_on_save = true;
         };
         "HTML" = {
-          language_servers = ["emmet-language-server"];
+          language_servers = ["html-language-server"];
           format_on_save = "on";
-          formatter = {
-            language_server = {
-              name = "biome";
-            };
-          };
           soft_wrap = "bounded";
           ensure_final_newline_on_save = true;
         };
         JavaScript = {
-          language_servers = ["vtsls" "biome"];
+          language_servers = ["vtsls"];
           format_on_save = "on";
           formatter = {
             language_server = {
-              name = "biome";
+              name = "vtls";
             };
           };
           soft_wrap = "bounded";
