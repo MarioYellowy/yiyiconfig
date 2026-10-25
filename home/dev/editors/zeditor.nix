@@ -57,8 +57,9 @@
           ensure_final_newline_on_save = true;
         };
         "HTML" = {
-          language_servers = ["html-language-server"];
+          language_servers = ["vscode-html-language-server"];
           format_on_save = "on";
+          formatter = "language_server";
           soft_wrap = "bounded";
           ensure_final_newline_on_save = true;
         };
@@ -67,7 +68,7 @@
           format_on_save = "on";
           formatter = {
             language_server = {
-              name = "vtls";
+              name = "vtsls";
             };
           };
           soft_wrap = "bounded";
