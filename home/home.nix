@@ -47,6 +47,7 @@
       #surrealdb
       railway
       inkscape
+      vesktop
     ]);
 
   gtk = {
