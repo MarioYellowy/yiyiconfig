@@ -26,6 +26,7 @@ in {
         ++ [harper];
 
       userSettings = {
+        "chat.disableAIFeatures" = true;
         "editor.cursorBlinking" = "smooth";
         "editor.cursorSmoothCaretAnimation" = "on";
         "editor.cursorStyle" = "line";
