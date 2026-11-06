@@ -10,14 +10,12 @@
 in {
   programs.vscode = {
     enable = true;
+    package = pkgs.vscodium;
     profiles.default = {
       extensions =
         (with pkgs.vscode-extensions; [
           jnoortheen.nix-ide
-          biomejs.biome
           nefrob.vscode-just-syntax
-          #icrawl.discord-vscode
-          #repreng.csv
           mechatroner.rainbow-csv
           ritwickdey.liveserver
           catppuccin.catppuccin-vsc-icons
