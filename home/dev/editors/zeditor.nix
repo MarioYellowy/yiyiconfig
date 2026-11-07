@@ -13,7 +13,6 @@
       "slint"
       "sql"
 
-      "biome"
       "csv"
       "emmet"
       "rainbow-csv"
