@@ -8,9 +8,8 @@
     };
   };
 in {
-  programs.vscode = {
+  programs.vscodium = {
     enable = true;
-    package = pkgs.vscodium;
     profiles.default = {
       extensions =
         (with pkgs.vscode-extensions; [
@@ -18,6 +17,7 @@ in {
           nefrob.vscode-just-syntax
           mechatroner.rainbow-csv
           ritwickdey.liveserver
+          bradlc.vscode-tailwindcss
           catppuccin.catppuccin-vsc-icons
           catppuccin.catppuccin-vsc
         ])
@@ -31,6 +31,10 @@ in {
         "editor.fontFamily" = "JetBrainsMono Nerd Font";
         "editor.formatOnPaste" = true;
         "editor.formatOnSave" = true;
+
+        "files.associations" = {
+          "*.css" = "tailwindcss";
+        };
 
         "workbench.iconTheme" = "catppuccin-mocha";
         "workbench.colorTheme" = "Catppuccin Mocha";
@@ -55,7 +59,6 @@ in {
         };
 
         "[javascript]" = {
-          "editor.defaultFormatter" = "biomejs.biome";
           "editor.formatOnSave" = true;
           "editor.wordWrap" = "bounded";
           "files.insertFinalNewline" = true;

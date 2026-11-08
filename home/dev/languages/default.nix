@@ -8,6 +8,5 @@
     ./nix.nix
     ./rust.nix
     ./slint.nix
-    ./web.nix
   ];
 }

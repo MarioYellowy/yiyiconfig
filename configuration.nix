@@ -1,8 +1,4 @@
-{
-  pkgs,
-  pkgs-unstable,
-  ...
-}: {
+{pkgs, ...}: {
   imports = [
     ./core
   ];
@@ -34,29 +30,23 @@
   xdg.portal.enable = true;
   xdg.portal.extraPortals = [pkgs.xdg-desktop-portal-hyprland];
 
-  # virtualisation.virtualbox.host.enable = true;
+  environment.systemPackages = with pkgs; [
+    python3
+    nodejs
+    typescript
+    pnpm
+    jdk
+    just
+    harper
 
-  environment.systemPackages =
-    (with pkgs; [
-      python3
-      nodejs
-      typescript
-      pnpm
-      jdk
-      just
-      harper
-
-      unzip
-      libreoffice
-      nautilus
-      baobab
-      vlc
-      dnsutils
-      loupe
-    ])
-    ++ (with pkgs-unstable; [
-      brave
-    ]);
+    unzip
+    libreoffice
+    nautilus
+    baobab
+    vlc
+    dnsutils
+    loupe
+  ];
 
   system.stateVersion = "26.05"; # Did you read the comment?
   system.autoUpgrade.enable = true;
