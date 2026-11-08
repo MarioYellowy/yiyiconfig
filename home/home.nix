@@ -14,7 +14,6 @@
     ./dev/starship
     ./dev/terminal_tools
     ./dev/direnv.nix
-    ./dev/firefox.nix
     ./dev/gcc.nix
     ./dev/git.nix
     ./chill/browsers
