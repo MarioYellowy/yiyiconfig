@@ -52,5 +52,9 @@
   system.autoUpgrade.enable = true;
   system.autoUpgrade.allowReboot = false;
 
+  virtualisation.docker.enable = true;
+
+  users.users.mario.extraGroups = ["docker"];
+
   zramSwap.enable = true;
 }
