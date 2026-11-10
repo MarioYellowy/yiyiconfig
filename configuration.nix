@@ -54,7 +54,5 @@
 
   virtualisation.docker.enable = true;
 
-  users.users.mario.extraGroups = ["docker"];
-
   zramSwap.enable = true;
 }

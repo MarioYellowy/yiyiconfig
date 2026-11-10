@@ -7,8 +7,7 @@
     extraGroups = [
       "networkmanager"
       "wheel"
+      "docker"
     ];
   };
-
-  # users.extraGroups.vboxusers.members = ["mario"];
 }
