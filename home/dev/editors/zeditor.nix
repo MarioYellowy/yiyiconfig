@@ -21,6 +21,7 @@
       "markdownlint"
       "toml"
 
+      "dockerfile"
       "git-firefly"
       "live-server"
 
