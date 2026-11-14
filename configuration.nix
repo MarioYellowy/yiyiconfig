@@ -46,6 +46,8 @@
     vlc
     dnsutils
     loupe
+    docker-compose
+    docker-compose-language-service
   ];
 
   system.stateVersion = "26.05"; # Did you read the comment?
