@@ -301,7 +301,7 @@
         copy_on_select = true;
         font_size = 14;
         font_family = "JetBrainsMono Nerd Font";
-        detect_venv = "true";
+        detect_venv = "on";
       };
 
       file_scan_exclusions = [
