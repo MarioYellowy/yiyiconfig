@@ -21,6 +21,7 @@
       "markdownlint"
       "toml"
 
+      "ansible"
       "dockerfile"
       "git-firefly"
       "live-server"
@@ -300,6 +301,7 @@
         copy_on_select = true;
         font_size = 14;
         font_family = "JetBrainsMono Nerd Font";
+        detect_venv = true;
       };
 
       file_scan_exclusions = [

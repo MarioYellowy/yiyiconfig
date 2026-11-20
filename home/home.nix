@@ -48,6 +48,7 @@
       railway
       inkscape
       vesktop
+      telegram-desktop
     ]);
 
   gtk = {
