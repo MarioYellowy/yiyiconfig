@@ -25,6 +25,7 @@
       "dockerfile"
       "git-firefly"
       "live-server"
+      "pyrefly"
 
       "env"
       "just"
