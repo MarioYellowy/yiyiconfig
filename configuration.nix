@@ -55,6 +55,7 @@
   system.autoUpgrade.allowReboot = false;
 
   virtualisation.docker.enable = true;
+  virtualisation.podman.enable = true;
 
   zramSwap.enable = true;
 }
