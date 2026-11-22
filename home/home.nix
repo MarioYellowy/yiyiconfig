@@ -49,6 +49,7 @@
       inkscape
       vesktop
       telegram-desktop
+      uv
     ]);
 
   gtk = {
